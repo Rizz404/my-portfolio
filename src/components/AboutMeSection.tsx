@@ -1,8 +1,12 @@
+import { useLocalization } from "../hooks/useLocalization";
+
 interface AboutMeSectionProps {
   id: string;
 }
 
 const AboutMeSection = ({ id }: AboutMeSectionProps) => {
+  const { t } = useLocalization();
+
   return (
     <section
       id={id}
@@ -12,7 +16,7 @@ const AboutMeSection = ({ id }: AboutMeSectionProps) => {
         <div className="p-1 overflow-hidden border-2 rounded w-60 h-60 bg-bg-element border-primary">
           <img
             src="https://i.pinimg.com/736x/a1/1b/07/a11b07f6d1022fb95d2d668cc77eee96.jpg"
-            alt="Rizqiansyah Ramadhan"
+            alt={t("aboutMe.imageAlt")}
             className="object-cover w-full h-full rounded"
             loading="lazy"
           />
@@ -20,59 +24,58 @@ const AboutMeSection = ({ id }: AboutMeSectionProps) => {
       </div>
       <div className="text-sm leading-relaxed md:w-2/3 md:text-base">
         <h2 className="mb-4 text-xl font-semibold text-center md:text-left">
-          Tentang <strong className="miku-text-gradient">Saya</strong>
+          {t("aboutMe.heading1")}{" "}
+          <strong className="miku-text-gradient">
+            {t("aboutMe.heading2")}
+          </strong>
         </h2>
 
-        <p className="mb-4 text-text-secondary">
-          Mahasiswa Software Engineering yang sedang menempuh pendidikan di
-          Global Institute Technology And Business dengan spesialisasi
-          pengembangan backend. Saya memiliki pengalaman dalam membuat dan
-          mengelola API menggunakan berbagai framework backend seperti Express,
-          NestJS, Flask, dan Laravel.
-        </p>
+        <p className="mb-4 text-text-secondary">{t("aboutMe.paragraph1")}</p>
 
-        <p className="mb-4 text-text-secondary">
-          Terampil dalam manajemen database menggunakan MongoDB, MySQL,
-          PostgreSQL, SQLite, dan Firebase. Memiliki pemahaman yang kuat tentang
-          konsep dan alur kerja frontend untuk mengintegrasikan API secara
-          efektif.
-        </p>
+        <p className="mb-4 text-text-secondary">{t("aboutMe.paragraph2")}</p>
 
         <div className="mt-6">
           <h3 className="mb-2 text-lg font-medium text-primary">
-            Keterampilan Tambahan
+            {t("aboutMe.additionalSkillsHeading")}
           </h3>
           <div className="flex flex-wrap gap-3">
-            <span className="px-3 py-1 text-xs font-medium rounded bg-bg-element">
-              Kolaborasi
-            </span>
-            <span className="px-3 py-1 text-xs font-medium rounded bg-bg-element">
-              Komunikasi
-            </span>
-            <span className="px-3 py-1 text-xs font-medium rounded bg-bg-element">
-              Pemecahan Masalah
-            </span>
-            <span className="px-3 py-1 text-xs font-medium rounded bg-bg-element">
-              Manajemen Waktu
-            </span>
+            {(
+              t("aboutMe.additionalSkills", {
+                returnObjects: true,
+              }) as unknown as string[]
+            ).map((skill: string, index: number) => (
+              <span
+                key={index}
+                className="px-3 py-1 text-xs font-medium rounded bg-bg-element"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
 
         <div className="mt-4">
-          <h3 className="mb-2 text-lg font-medium text-primary">Bahasa</h3>
+          <h3 className="mb-2 text-lg font-medium text-primary">
+            {t("aboutMe.languagesHeading")}
+          </h3>
           <div className="flex gap-3">
-            <span className="px-3 py-1 text-xs font-medium rounded bg-bg-element">
-              Indonesia (Native)
-            </span>
-            <span className="px-3 py-1 text-xs font-medium rounded bg-bg-element">
-              Inggris (Intermediate)
-            </span>
+            {(
+              t("aboutMe.languages", {
+                returnObjects: true,
+              }) as unknown as string[]
+            ).map((lang: string, index: number) => (
+              <span
+                key={index}
+                className="px-3 py-1 text-xs font-medium rounded bg-bg-element"
+              >
+                {lang}
+              </span>
+            ))}
           </div>
         </div>
 
         <div className="mt-6 text-sm italic text-text-tertiary">
-          "Selalu bersemangat untuk belajar dan berkontribusi pada proyek-proyek
-          yang berdampak."
+          "{t("aboutMe.quote")}"
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocalization } from "../hooks/useLocalization";
 
 interface SkillsSectionProps {
   id: string;
@@ -14,6 +15,7 @@ type SkillsByCategory = {
 const SkillsSection = ({ id }: SkillsSectionProps) => {
   type Category = "all" | "backend" | "database" | "tools";
   const [activeCategory, setActiveCategory] = useState<Category>("all");
+  const { t } = useLocalization();
 
   const skills: SkillsByCategory = {
     all: [],
@@ -55,7 +57,8 @@ const SkillsSection = ({ id }: SkillsSectionProps) => {
   return (
     <section id={id} className="max-w-4xl mx-auto mt-20">
       <h2 className="mb-6 text-xl font-semibold text-center">
-        My <strong className="miku-text-gradient">Technical Skills</strong>
+        {t("skills.heading")}
+        <strong className="miku-text-gradient"> {t("skills.heading2")}</strong>
       </h2>
 
       <div className="flex flex-wrap justify-center mb-8 space-x-4">

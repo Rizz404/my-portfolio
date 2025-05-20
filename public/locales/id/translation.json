@@ -2,6 +2,8 @@
   "navigation": {
     "home": "Beranda",
     "skills": "Keahlian",
+    "aboutMe": "About Me",
+    "experience": "Pengalaman",
     "projects": "Proyek",
     "contact": "Kontak"
   },
@@ -17,42 +19,176 @@
     "downloadCV": "Unduh CV"
   },
   "hero": {
-    "greeting": "Halo, Saya",
-    "name": "Nama Anda",
-    "profession": "Pengembang Full Stack",
-    "description": "Saya membangun aplikasi web dengan teknologi modern yang membantu bisnis berkembang."
-  },
-  "about": {
-    "title": "Tentang Saya",
-    "description": "Saya adalah pengembang full stack yang bersemangat dengan pengalaman dalam membangun aplikasi web yang responsif dan berkinerja tinggi. Saya senang memecahkan masalah kompleks dan mempelajari teknologi baru.",
-    "experience": "Tahun Pengalaman",
-    "projects": "Proyek Selesai",
-    "clients": "Klien Puas"
+    "greeting": "Halo, saya",
+    "name": "Rizqiansyah Ramadhan.",
+    "role": "Backend",
+    "developer": "Developer",
+    "location": "Berbasis di",
+    "city": "Tangerang, Banten.",
+    "bio": "Mahasiswa Teknik Perangkat Lunak dengan spesialisasi pengembangan backend, berpengalaman dalam membangun dan mengelola API menggunakan Express, NestJS, Flask, dan Laravel, serta mahir dalam manajemen database seperti MongoDB, MySQL, dan PostgreSQL. Siap berkontribusi dalam proyek-proyek berdampak.",
+    "emailAriaLabel": "Email",
+    "githubAriaLabel": "GitHub",
+    "linkedinAriaLabel": "LinkedIn",
+    "facebookAriaLabel": "Facebook",
+    "instagramAriaLabel": "Instagram",
+    "imageAlt": "Ilustrasi seorang backend developer dengan kode atau server"
   },
   "skills": {
-    "title": "Keahlian Saya",
-    "frontend": "Pengembangan Frontend",
-    "backend": "Pengembangan Backend",
-    "mobile": "Pengembangan Mobile",
-    "tools": "Alat & Teknologi"
+    "heading": "Skill",
+    "heading2": "Saya"
+  },
+  "experience": {
+    "heading1": "Pengalaman",
+    "heading2": "Profesional",
+    "currentFocus": "Saat ini fokus untuk mendapatkan pengalaman praktis dan menyelesaikan pendidikan saya di",
+    "universityName": "Global Institute Technology And Business",
+    "universityPeriod": "(2022-2025).",
+    "sanken": {
+      "position": "Internship - Quality Control",
+      "period": "2023 - 2024",
+      "description1": "Melakukan pengecekan kualitas pada unit refrigerator untuk memastikan kesesuaian dengan standar perusahaan.",
+      "description2": "Berkolaborasi dengan tim produksi untuk mengidentifikasi dan menyelesaikan cacat selama proses manufaktur."
+    },
+    "visionet": {
+      "position": "One Day Experience as IT Team",
+      "period": "Oktober 2023",
+      "description1": "Mengikuti pelatihan singkat sebagai bagian dari tim IT untuk pengalaman praktis."
+    }
+  },
+  "aboutMe": {
+    "heading1": "Tentang",
+    "heading2": "Saya",
+    "imageAlt": "Foto profil Rizqiansyah Ramadhan",
+    "paragraph1": "Mahasiswa Software Engineering yang sedang menempuh pendidikan di Global Institute Technology And Business dengan spesialisasi pengembangan backend. Saya memiliki pengalaman dalam membuat dan mengelola API menggunakan berbagai framework backend seperti Express, NestJS, Flask, dan Laravel.",
+    "paragraph2": "Terampil dalam manajemen database menggunakan MongoDB, MySQL, PostgreSQL, SQLite, dan Firebase. Memiliki pemahaman yang kuat tentang konsep dan alur kerja frontend untuk mengintegrasikan API secara efektif.",
+    "additionalSkillsHeading": "Keterampilan Tambahan",
+    "additionalSkills": [
+      "Kolaborasi",
+      "Komunikasi",
+      "Pemecahan Masalah",
+      "Manajemen Waktu"
+    ],
+    "languagesHeading": "Bahasa",
+    "languages": ["Indonesia (Native)", "Inggris (Intermediate)"],
+    "quote": "Selalu bersemangat untuk belajar dan berkontribusi pada proyek-proyek yang berdampak."
   },
   "projects": {
-    "title": "Proyek Terbaru",
-    "viewAll": "Lihat Semua Proyek",
-    "viewDetails": "Lihat Detail",
-    "visitWebsite": "Kunjungi Website"
+    "heading1": "Proyek",
+    "heading2": "Saya",
+    "categories": {
+      "all": "Semua Proyek",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Fullstack",
+      "mobile": "Mobile"
+    },
+    "status": {
+      "deployed": "deployed",
+      "development": "development",
+      "label": "Status",
+      "maintained": "Maintained",
+      "archived": "Diarsipkan"
+    },
+    "deployment": {
+      "label": "Deployment",
+      "deployed": "Deployed",
+      "notDeployed": "Belum Dideploy"
+    },
+    "techStackHeading": "Tumpukan Teknologi",
+    "noProjectsFound": "Tidak ada proyek dalam kategori ini.",
+    "closeButton": "Tutup",
+    "closeModalAriaLabel": "Tutup detail proyek",
+    "catMarketplace": {
+      "name": "Cat Marketplace with Native PHP",
+      "description": "Platform e-commerce untuk jual beli kucing dengan berbagai fitur seperti filter, pencarian, dan sistem keranjang belanja."
+    },
+    "project1": {
+      "name": "Project 1",
+      "description": "Proyek frontend dengan fokus pada UI/UX modern dan responsif."
+    },
+    "webStaticUAS": {
+      "name": "Web Static UAS",
+      "description": "Website statis untuk keperluan tugas akhir semester dengan desain minimalis."
+    },
+    "socialMediaApi": {
+      "name": "Social Media API",
+      "description": "Backend API untuk aplikasi media sosial dengan fitur autentikasi, posting, dan interaksi antar pengguna."
+    },
+    "magicScrollApi": {
+      "name": "Magic Scroll API",
+      "description": "API untuk aplikasi membaca dengan fitur bookmark, highlights, dan rekomendasi konten."
+    },
+    "sistemInformasiKKN": {
+      "name": "Sistem Informasi Pendaftaran KKN/KKP",
+      "description": "Aplikasi untuk memfasilitasi pendaftaran dan manajemen KKN/KKP mahasiswa."
+    },
+    "happinessOverloadApiV1": {
+      "name": "Happiness Overload API v1",
+      "description": "Backend API untuk aplikasi mood tracking dan jurnal kebahagiaan."
+    },
+    "happinessOverloadApiV2": {
+      "name": "Happiness Overload API v2",
+      "description": "Versi yang ditingkatkan dari Happiness Overload API dengan fitur tambahan dan performa yang lebih baik."
+    },
+    "magicScrollApiV2": {
+      "name": "Magic Scroll API v2",
+      "description": "Versi terbaru dari Magic Scroll API dengan arsitektur yang lebih baik dan fitur tambahan."
+    },
+    "bigFloppaApi": {
+      "name": "Big Floppa API",
+      "description": "Fun API dengan kumpulan gambar dan fakta tentang kucing Big Floppa."
+    },
+    "simpleFlutterTodo": {
+      "name": "Simple Flutter Todo",
+      "description": "Aplikasi todo list sederhana dibuat dengan Flutter untuk Android dan iOS."
+    },
+    "gunApiWithFlask": {
+      "name": "Gun API with Flask",
+      "description": "API untuk katalog dan informasi tentang senjata api menggunakan Flask."
+    },
+    "uasMobile": {
+      "name": "UAS Mobile",
+      "description": "Aplikasi mobile yang dibuat untuk tugas akhir semester dengan fokus pada UI/UX."
+    },
+    "eBookApi": {
+      "name": "E-Book API with Standardized API",
+      "description": "API untuk aplikasi e-book dengan standar REST API yang konsisten."
+    },
+    "tegarWorkshopServer": {
+      "name": "Tegar Workshop Server",
+      "description": "Backend untuk aplikasi manajemen bengkel dengan fitur inventaris dan pelacakan servis."
+    },
+    "rekomendasiJurusanLaravel": {
+      "name": "Rekomendasi Jurusan Laravel",
+      "description": "Aplikasi untuk membantu calon mahasiswa memilih jurusan berdasarkan minat dan kemampuan."
+    },
+    "carPaintServer": {
+      "name": "Car Paint Server",
+      "description": "Backend untuk aplikasi katalog warna dan jenis cat mobil."
+    },
+    "project3": {
+      "name": "Project 3",
+      "description": "Aplikasi mobile dengan fitur interaktif dan animasi modern."
+    }
   },
   "contact": {
-    "title": "Hubungi Saya",
-    "name": "Nama Anda",
-    "email": "Email Anda",
-    "message": "Pesan Anda",
-    "send": "Kirim Pesan",
-    "success": "Pesan Anda telah berhasil dikirim!",
-    "error": "Terjadi kesalahan saat mengirim pesan Anda. Silakan coba lagi."
+    "heading1": "Hubungi",
+    "heading2": "Saya",
+    "name": "Rizqiansyah Ramadhan",
+    "emailLabel": "Email",
+    "email": "thenoblerizz@gmail.com",
+    "phoneLabel": "Telepon",
+    "phone": "+62 7778206856",
+    "locationLabel": "Lokasi",
+    "location": "Tangerang, Banten",
+    "connectHeading": "Terhubung Dengan Saya",
+    "connectDescription": "Jangan ragu untuk menghubungi jika Anda mencari pengembang backend atau ingin mendiskusikan sebuah proyek.",
+    "githubAriaLabel": "Profil GitHub",
+    "linkedinAriaLabel": "Profil LinkedIn",
+    "facebookAriaLabel": "Profil Facebook",
+    "instagramAriaLabel": "Profil Instagram"
   },
   "footer": {
-    "rights": "Seluruh hak cipta dilindungi",
-    "followMe": "Ikuti Saya"
+    "signature": "Didesain dan di maintain oleh Rizqiansyah"
   }
 }

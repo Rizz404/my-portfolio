@@ -19,42 +19,176 @@
     "downloadCV": "Download CV"
   },
   "hero": {
-    "greeting": "Hello, I'm",
-    "name": "Your Name",
-    "profession": "Full Stack Developer",
-    "description": "I build web applications with modern technologies that help businesses grow."
-  },
-  "about": {
-    "title": "About Me",
-    "description": "I'm a passionate full stack developer with experience in building responsive and performant web applications. I enjoy solving complex problems and learning new technologies.",
-    "experience": "Years of Experience",
-    "projects": "Projects Completed",
-    "clients": "Happy Clients"
+    "greeting": "Hello I'm",
+    "name": "Rizqiansyah Ramadhan.",
+    "role": "Backend",
+    "developer": "Developer",
+    "location": "Based In",
+    "city": "Tangerang, Banten.",
+    "bio": "Software Engineering student specializing in backend development, experienced in building and managing APIs using Express, NestJS, Flask, and Laravel, as well as proficient in database management such as MongoDB, MySQL, and PostgreSQL. Ready to contribute to impactful projects.",
+    "emailAriaLabel": "Email",
+    "githubAriaLabel": "GitHub",
+    "linkedinAriaLabel": "LinkedIn",
+    "facebookAriaLabel": "Facebook",
+    "instagramAriaLabel": "Instagram",
+    "imageAlt": "Illustration of a backend developer with code or servers"
   },
   "skills": {
-    "title": "My Skills",
-    "frontend": "Frontend Development",
-    "backend": "Backend Development",
-    "mobile": "Mobile Development",
-    "tools": "Tools & Technologies"
+    "heading": "My",
+    "heading2": "Skills"
+  },
+  "experience": {
+    "heading1": "Professional",
+    "heading2": "Experience",
+    "currentFocus": "Currently focused on gaining practical experience and completing my education at",
+    "universityName": "Global Institute Technology And Business",
+    "universityPeriod": "(2022-2025).",
+    "sanken": {
+      "position": "Internship - Quality Control",
+      "period": "2023 - 2024",
+      "description1": "Performed quality checks on refrigerator units to ensure compliance with company standards.",
+      "description2": "Collaborated with the production team to identify and resolve defects during the manufacturing process."
+    },
+    "visionet": {
+      "position": "One Day Experience as IT Team",
+      "period": "October 2023",
+      "description1": "Participated in a brief training as part of the IT team for practical experience."
+    }
+  },
+  "aboutMe": {
+    "heading1": "About",
+    "heading2": "Me",
+    "imageAlt": "Rizqiansyah Ramadhan's profile picture",
+    "paragraph1": "A Software Engineering student currently pursuing education at Global Institute Technology And Business, specializing in backend development. I have experience in building and managing APIs using various backend frameworks such as Express, NestJS, Flask, and Laravel.",
+    "paragraph2": "Proficient in database management using MongoDB, MySQL, PostgreSQL, SQLite, and Firebase. Possess a strong understanding of frontend concepts and workflows for effective API integration.",
+    "additionalSkillsHeading": "Additional Skills",
+    "additionalSkills": [
+      "Collaboration",
+      "Communication",
+      "Problem Solving",
+      "Time Management"
+    ],
+    "languagesHeading": "Languages",
+    "languages": ["Indonesian (Native)", "English (Intermediate)"],
+    "quote": "Always eager to learn and contribute to impactful projects."
   },
   "projects": {
-    "title": "Recent Projects",
-    "viewAll": "View All Projects",
-    "viewDetails": "View Details",
-    "visitWebsite": "Visit Website"
+    "heading1": "My",
+    "heading2": "Projects",
+    "categories": {
+      "all": "All Projects",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Fullstack",
+      "mobile": "Mobile"
+    },
+    "status": {
+      "deployed": "deployed",
+      "development": "development",
+      "label": "Status",
+      "maintained": "Maintained",
+      "archived": "Archived"
+    },
+    "deployment": {
+      "label": "Deployment",
+      "deployed": "Deployed",
+      "notDeployed": "Not Deployed"
+    },
+    "techStackHeading": "Tech Stack",
+    "noProjectsFound": "No projects found in this category.",
+    "closeButton": "Close",
+    "closeModalAriaLabel": "Close project details",
+    "catMarketplace": {
+      "name": "Cat Marketplace with Native PHP",
+      "description": "An e-commerce platform for buying and selling cats with features like filtering, searching, and a shopping cart system."
+    },
+    "project1": {
+      "name": "Project 1",
+      "description": "A frontend project focused on modern and responsive UI/UX."
+    },
+    "webStaticUAS": {
+      "name": "Web Static UAS",
+      "description": "A static website for a final semester assignment with a minimalist design."
+    },
+    "socialMediaApi": {
+      "name": "Social Media API",
+      "description": "Backend API for a social media application with authentication, posting, and user interaction features."
+    },
+    "magicScrollApi": {
+      "name": "Magic Scroll API",
+      "description": "An API for a reading application with bookmark, highlight, and content recommendation features."
+    },
+    "sistemInformasiKKN": {
+      "name": "KKN/KKP Registration Information System",
+      "description": "An application to facilitate student KKN/KKP registration and management."
+    },
+    "happinessOverloadApiV1": {
+      "name": "Happiness Overload API v1",
+      "description": "Backend API for a mood tracking and happiness journal application."
+    },
+    "happinessOverloadApiV2": {
+      "name": "Happiness Overload API v2",
+      "description": "An improved version of the Happiness Overload API with additional features and better performance."
+    },
+    "magicScrollApiV2": {
+      "name": "Magic Scroll API v2",
+      "description": "The latest version of the Magic Scroll API with improved architecture and additional features."
+    },
+    "bigFloppaApi": {
+      "name": "Big Floppa API",
+      "description": "A fun API with a collection of images and facts about Big Floppa cats."
+    },
+    "simpleFlutterTodo": {
+      "name": "Simple Flutter Todo",
+      "description": "A simple todo list application built with Flutter for Android and iOS."
+    },
+    "gunApiWithFlask": {
+      "name": "Gun API with Flask",
+      "description": "An API for a firearms catalog and information using Flask."
+    },
+    "uasMobile": {
+      "name": "UAS Mobile",
+      "description": "A mobile application built for a final semester assignment with a focus on UI/UX."
+    },
+    "eBookApi": {
+      "name": "E-Book API with Standardized API",
+      "description": "An API for an e-book application with consistent REST API standards."
+    },
+    "tegarWorkshopServer": {
+      "name": "Tegar Workshop Server",
+      "description": "Backend for a workshop management application with inventory and service tracking features."
+    },
+    "rekomendasiJurusanLaravel": {
+      "name": "Rekomendasi Jurusan Laravel",
+      "description": "An application to help prospective students choose a major based on interests and abilities."
+    },
+    "carPaintServer": {
+      "name": "Car Paint Server",
+      "description": "Backend for a car paint color and type catalog application."
+    },
+    "project3": {
+      "name": "Project 3",
+      "description": "A mobile application with interactive features and modern animations."
+    }
   },
   "contact": {
-    "title": "Get In Touch",
-    "name": "Your Name",
-    "email": "Your Email",
-    "message": "Your Message",
-    "send": "Send Message",
-    "success": "Your message has been sent successfully!",
-    "error": "There was an error sending your message. Please try again."
+    "heading1": "Contact",
+    "heading2": "Me",
+    "name": "Rizqiansyah Ramadhan",
+    "emailLabel": "Email",
+    "email": "thenoblerizz@gmail.com",
+    "phoneLabel": "Phone",
+    "phone": "+62 7778206856",
+    "locationLabel": "Location",
+    "location": "Tangerang, Banten",
+    "connectHeading": "Connect With Me",
+    "connectDescription": "Feel free to reach out if you're looking for a backend developer or want to discuss a project.",
+    "githubAriaLabel": "GitHub profile",
+    "linkedinAriaLabel": "LinkedIn profile",
+    "facebookAriaLabel": "Facebook profile",
+    "instagramAriaLabel": "Instagram profile"
   },
   "footer": {
-    "rights": "All rights reserved",
-    "followMe": "Follow Me"
+    "signature": "Designed and Developed by Rizqiansyah"
   }
 }

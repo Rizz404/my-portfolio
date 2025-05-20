@@ -1,8 +1,12 @@
+import { useLocalization } from "../hooks/useLocalization";
+
 interface HeroSectionProps {
   id: string;
 }
 
 const HeroSection = ({ id }: HeroSectionProps) => {
+  const { t } = useLocalization();
+
   return (
     <section
       id={id}
@@ -10,51 +14,47 @@ const HeroSection = ({ id }: HeroSectionProps) => {
     >
       <div className="max-w-lg md:w-1/2">
         <h1 className="text-3xl font-semibold leading-tight md:text-4xl font-heading">
-          Hello I'm <strong>Rizqiansyah Ramadhan.</strong>
+          {t("hero.greeting")} <strong>{t("hero.name")}</strong>
           <br />
-          Backend <strong>Developer</strong>
+          {t("hero.role")} <strong>{t("hero.developer")}</strong>
           <br />
-          Based In <strong>Tangerang, Banten.</strong>
+          {t("hero.location")} <strong>{t("hero.city")}</strong>
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-text-secondary md:text-base font-body">
-          Mahasiswa Teknik Perangkat Lunak dengan spesialisasi pengembangan
-          backend, berpengalaman dalam membangun dan mengelola API menggunakan
-          Express, NestJS, Flask, dan Laravel, serta mahir dalam manajemen
-          database seperti MongoDB, MySQL, dan PostgreSQL. Siap berkontribusi
-          dalam proyek-proyek berdampak.
+          {t("hero.bio")}
         </p>
         <div className="flex mt-6 space-x-4 text-lg text-primary">
           <a
             href="mailto:thenoblerizz@gmail.com"
-            aria-label="Email"
+            aria-label={t("hero.emailAriaLabel")}
             className="hover:text-primary-hover"
           >
             <i className="fas fa-envelope"></i>
           </a>
           <a
             href="https://github.com/rizz404"
-            aria-label="GitHub"
+            aria-label={t("hero.githubAriaLabel")}
             className="hover:text-primary-hover"
           >
             <i className="fab fa-github"></i>
           </a>
           <a
             href="https://www.linkedin.com/in/rizqiansyah-ramadhan-37b0b9313"
-            aria-label="LinkedIn"
+            aria-label={t("hero.linkedinAriaLabel")}
             className="hover:text-primary-hover"
           >
             <i className="fab fa-linkedin-in"></i>
           </a>
           <a
             href="https://web.facebook.com/profile.php?id=61551041113414"
-            aria-label="Facebook"
+            aria-label={t("hero.facebookAriaLabel")}
             className="hover:text-primary-hover"
           >
             <i className="fab fa-facebook-f"></i>
           </a>
           <a
             href="https://www.instagram.com/better_call_rizz"
-            aria-label="Instagram"
+            aria-label={t("hero.instagramAriaLabel")}
             className="hover:text-primary-hover"
           >
             <i className="fab fa-instagram"></i>
@@ -65,7 +65,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
         <div className="p-1 border-2 border-primary bg-bg-element w-fit">
           <img
             src="https://i.pinimg.com/736x/35/d7/7f/35d77fc6dba1171f679b5fcaa7049803.jpg"
-            alt="Ilustrasi seorang backend developer dengan kode atau server"
+            alt={t("hero.imageAlt")}
             className="object-cover h-auto w-72"
             loading="lazy"
           />

@@ -1,3 +1,5 @@
+import { useLocalization } from "../hooks/useLocalization";
+
 interface ExperienceSectionProps {
   id: string;
 }
@@ -11,24 +13,24 @@ type Experience = {
 };
 
 const ExperienceSection = ({ id }: ExperienceSectionProps) => {
+  const { t } = useLocalization();
+
   const experiences: Experience[] = [
     {
       company: "PT. Sanken Indonesia",
-      position: "Internship - Quality Control",
-      period: "2023 - 2024",
+      position: t("experience.sanken.position"),
+      period: t("experience.sanken.period"),
       description: [
-        "Melakukan pengecekan kualitas pada unit refrigerator untuk memastikan kesesuaian dengan standar perusahaan.",
-        "Berkolaborasi dengan tim produksi untuk mengidentifikasi dan menyelesaikan cacat selama proses manufaktur.",
+        t("experience.sanken.description1"),
+        t("experience.sanken.description2"),
       ],
       icon: "fas fa-industry",
     },
     {
       company: "Visionet",
-      position: "One Day Experience as IT Team",
-      period: "Oktober 2023",
-      description: [
-        "Mengikuti pelatihan singkat sebagai bagian dari tim IT untuk pengalaman praktis.",
-      ],
+      position: t("experience.visionet.position"),
+      period: t("experience.visionet.period"),
+      description: [t("experience.visionet.description1")],
       icon: "fas fa-laptop-code",
     },
   ];
@@ -106,7 +108,10 @@ const ExperienceSection = ({ id }: ExperienceSectionProps) => {
   return (
     <section id={id} className="max-w-5xl px-4 mx-auto mt-20">
       <h2 className="mb-6 text-xl font-semibold text-center">
-        <strong className="miku-text-gradient">Pengalaman</strong> Profesional
+        <strong className="miku-text-gradient">
+          {t("experience.heading1")}
+        </strong>{" "}
+        {t("experience.heading2")}
       </h2>
 
       <div className="space-y-6">
@@ -121,13 +126,12 @@ const ExperienceSection = ({ id }: ExperienceSectionProps) => {
 
       <div className="mt-8 text-center">
         <p className="text-sm italic text-text-secondary">
-          Saat ini fokus untuk mendapatkan pengalaman praktis dan menyelesaikan
-          pendidikan saya di
+          {t("experience.currentFocus")}
           <span className="font-medium text-primary">
             {" "}
-            Global Institute Technology And Business
+            {t("experience.universityName")}
           </span>{" "}
-          (2022-2025).
+          {t("experience.universityPeriod")}
         </p>
       </div>
     </section>

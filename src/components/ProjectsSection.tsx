@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocalization } from "../hooks/useLocalization";
 
 interface ProjectsSectionProps {
   id: string;
@@ -18,6 +19,7 @@ type Project = {
 };
 
 const ProjectsSection = ({ id }: ProjectsSectionProps) => {
+  const { t } = useLocalization();
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
@@ -25,9 +27,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
   const projects: Project[] = [
     {
       id: "cat-marketplace",
-      name: "Cat Marketplace with Native PHP",
-      description:
-        "Platform e-commerce untuk jual beli kucing dengan berbagai fitur seperti filter, pencarian, dan sistem keranjang belanja.",
+      name: t("projects.catMarketplace.name"),
+      description: t("projects.catMarketplace.description"),
       category: "fullstack",
       techStack: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -36,9 +37,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "project1",
-      name: "Project 1",
-      description:
-        "Proyek frontend dengan fokus pada UI/UX modern dan responsif.",
+      name: t("projects.project1.name"),
+      description: t("projects.project1.description"),
       category: "frontend",
       techStack: ["React", "Tailwind CSS", "JavaScript"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -47,9 +47,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "web-static-uas",
-      name: "Web Static UAS",
-      description:
-        "Website statis untuk keperluan tugas akhir semester dengan desain minimalis.",
+      name: t("projects.webStaticUAS.name"),
+      description: t("projects.webStaticUAS.description"),
       category: "frontend",
       techStack: ["HTML", "CSS", "JavaScript"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -58,9 +57,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "social-media-api",
-      name: "Social Media API",
-      description:
-        "Backend API untuk aplikasi media sosial dengan fitur autentikasi, posting, dan interaksi antar pengguna.",
+      name: t("projects.socialMediaApi.name"),
+      description: t("projects.socialMediaApi.description"),
       category: "backend",
       techStack: ["Express", "MongoDB", "JWT", "Node.js"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -69,9 +67,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "magic-scroll-api",
-      name: "Magic Scroll API",
-      description:
-        "API untuk aplikasi membaca dengan fitur bookmark, highlights, dan rekomendasi konten.",
+      name: t("projects.magicScrollApi.name"),
+      description: t("projects.magicScrollApi.description"),
       category: "backend",
       techStack: ["Express", "PostgreSQL", "TypeScript", "Node.js"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -80,9 +77,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "sistem-informasi-kkn",
-      name: "Sistem Informasi Pendaftaran KKN/KKP",
-      description:
-        "Aplikasi untuk memfasilitasi pendaftaran dan manajemen KKN/KKP mahasiswa.",
+      name: t("projects.sistemInformasiKKN.name"),
+      description: t("projects.sistemInformasiKKN.description"),
       category: "fullstack",
       techStack: ["PHP", "MySQL", "Bootstrap", "jQuery"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -91,9 +87,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "happiness-overload-api-v1",
-      name: "Happiness Overload API v1",
-      description:
-        "Backend API untuk aplikasi mood tracking dan jurnal kebahagiaan.",
+      name: t("projects.happinessOverloadApiV1.name"),
+      description: t("projects.happinessOverloadApiV1.description"),
       category: "backend",
       techStack: ["Express", "MongoDB", "JWT", "Node.js"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -102,9 +97,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "happiness-overload-api-v2",
-      name: "Happiness Overload API v2",
-      description:
-        "Versi yang ditingkatkan dari Happiness Overload API dengan fitur tambahan dan performa yang lebih baik.",
+      name: t("projects.happinessOverloadApiV2.name"),
+      description: t("projects.happinessOverloadApiV2.description"),
       category: "backend",
       techStack: ["NestJS", "PostgreSQL", "TypeScript", "Prisma"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -113,9 +107,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "magic-scroll-api-v2",
-      name: "Magic Scroll API v2",
-      description:
-        "Versi terbaru dari Magic Scroll API dengan arsitektur yang lebih baik dan fitur tambahan.",
+      name: t("projects.magicScrollApiV2.name"),
+      description: t("projects.magicScrollApiV2.description"),
       category: "backend",
       techStack: ["NestJS", "MongoDB", "TypeScript", "Redis"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -124,9 +117,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "big-floppa-api",
-      name: "Big Floppa API",
-      description:
-        "Fun API dengan kumpulan gambar dan fakta tentang kucing Big Floppa.",
+      name: t("projects.bigFloppaApi.name"),
+      description: t("projects.bigFloppaApi.description"),
       category: "backend",
       techStack: ["Express", "MongoDB", "TypeScript", "Node.js"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -135,9 +127,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "simple-flutter-todo",
-      name: "Simple Flutter Todo",
-      description:
-        "Aplikasi todo list sederhana dibuat dengan Flutter untuk Android dan iOS.",
+      name: t("projects.simpleFlutterTodo.name"),
+      description: t("projects.simpleFlutterTodo.description"),
       category: "mobile",
       techStack: ["Flutter", "Dart", "Firebase"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -146,9 +137,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "gun-api-with-flask",
-      name: "Gun API with Flask",
-      description:
-        "API untuk katalog dan informasi tentang senjata api menggunakan Flask.",
+      name: t("projects.gunApiWithFlask.name"),
+      description: t("projects.gunApiWithFlask.description"),
       category: "backend",
       techStack: ["Flask", "Python", "SQLAlchemy", "SQLite"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -157,9 +147,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "uas-mobile",
-      name: "UAS Mobile",
-      description:
-        "Aplikasi mobile yang dibuat untuk tugas akhir semester dengan fokus pada UI/UX.",
+      name: t("projects.uasMobile.name"),
+      description: t("projects.uasMobile.description"),
       category: "mobile",
       techStack: ["Flutter", "Dart", "Firebase"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -168,9 +157,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "e-book-api",
-      name: "E-Book API with Standardized API",
-      description:
-        "API untuk aplikasi e-book dengan standar REST API yang konsisten.",
+      name: t("projects.eBookApi.name"),
+      description: t("projects.eBookApi.description"),
       category: "backend",
       techStack: ["Express", "PostgreSQL", "TypeScript", "Node.js"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -179,9 +167,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "tegar-workshop-server",
-      name: "Tegar Workshop Server",
-      description:
-        "Backend untuk aplikasi manajemen bengkel dengan fitur inventaris dan pelacakan servis.",
+      name: t("projects.tegarWorkshopServer.name"),
+      description: t("projects.tegarWorkshopServer.description"),
       category: "backend",
       techStack: ["Express", "MongoDB", "JWT", "Node.js"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -190,9 +177,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "rekomendasi-jurusan-laravel",
-      name: "Rekomendasi Jurusan Laravel",
-      description:
-        "Aplikasi untuk membantu calon mahasiswa memilih jurusan berdasarkan minat dan kemampuan.",
+      name: t("projects.rekomendasiJurusanLaravel.name"),
+      description: t("projects.rekomendasiJurusanLaravel.description"),
       category: "fullstack",
       techStack: ["Laravel", "MySQL", "Bootstrap", "jQuery"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -201,8 +187,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "car-paint-server",
-      name: "Car Paint Server",
-      description: "Backend untuk aplikasi katalog warna dan jenis cat mobil.",
+      name: t("projects.carPaintServer.name"),
+      description: t("projects.carPaintServer.description"),
       category: "backend",
       techStack: ["Express", "MongoDB", "Node.js"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -211,9 +197,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     },
     {
       id: "project-3",
-      name: "Project 3",
-      description:
-        "Aplikasi mobile dengan fitur interaktif dan animasi modern.",
+      name: t("projects.project3.name"),
+      description: t("projects.project3.description"),
       category: "mobile",
       techStack: ["Flutter", "Dart", "GetX", "Firebase"],
       image: "/assets/images/rekomendasi-jurusan.png",
@@ -223,11 +208,11 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
   ];
 
   const categories = [
-    { id: "all", name: "Semua Proyek" },
-    { id: "frontend", name: "Frontend" },
-    { id: "backend", name: "Backend" },
-    { id: "fullstack", name: "Fullstack" },
-    { id: "mobile", name: "Mobile" },
+    { id: "all", name: t("projects.categories.all") },
+    { id: "frontend", name: t("projects.categories.frontend") },
+    { id: "backend", name: t("projects.categories.backend") },
+    { id: "fullstack", name: t("projects.categories.fullstack") },
+    { id: "mobile", name: t("projects.categories.mobile") },
   ];
 
   const filteredProjects = projects.filter(
@@ -243,7 +228,6 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     setModalOpen(false);
   };
 
-  // Prevent body scroll when modal is open
   if (modalOpen) {
     document.body.style.overflow = "hidden";
   } else {
@@ -253,7 +237,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
   return (
     <section id={id} className="px-4 mx-auto mt-20 max-w-7xl">
       <h2 className="mb-6 text-xl font-semibold text-center">
-        <strong className="miku-text-gradient">Proyek</strong> Saya
+        <strong className="miku-text-gradient">{t("projects.heading1")}</strong>{" "}
+        {t("projects.heading2")}
       </h2>
 
       <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -319,11 +304,13 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
                 <span className="text-xs">
                   {project.deployed ? (
                     <span className="text-green-500">
-                      <i className="mr-1 fas fa-check-circle"></i>deployed
+                      <i className="mr-1 fas fa-check-circle"></i>
+                      {t("projects.status.deployed")}
                     </span>
                   ) : (
                     <span className="text-text-tertiary">
-                      <i className="mr-1 fas fa-code-branch"></i>development
+                      <i className="mr-1 fas fa-code-branch"></i>
+                      {t("projects.status.development")}
                     </span>
                   )}
                 </span>
@@ -335,21 +322,23 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
 
       {filteredProjects.length === 0 && (
         <div className="py-20 text-center">
-          <p className="text-text-secondary">
-            Tidak ada proyek dalam kategori ini.
-          </p>
+          <p className="text-text-secondary">{t("projects.noProjectsFound")}</p>
         </div>
       )}
 
       {modalOpen && selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-10 overflow-y-auto bg-black bg-opacity-70">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center px-4 py-10 overflow-y-auto bg-black bg-opacity-70"
+          onClick={closeModal} // Close modal when clicking outside
+        >
           <div
             className="bg-bg-main rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()} // Prevent modal from closing when clicking inside
           >
             <button
               className="absolute text-xl top-4 right-4 text-text-primary hover:text-primary"
               onClick={closeModal}
+              aria-label={t("projects.closeModalAriaLabel")}
             >
               <i className="fas fa-times"></i>
             </button>
@@ -375,7 +364,7 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
                       ? "bg-green-100 text-green-800"
                       : selectedProject.category === "fullstack"
                       ? "bg-purple-100 text-purple-800"
-                      : "bg-yellow-100 text-yellow-800"
+                      : "bg-yellow-100 text-yellow-800" // Fallback, consider adding 'mobile' specific style
                   }`}
                 >
                   {selectedProject.category}
@@ -388,7 +377,7 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
 
               <div className="mb-6">
                 <h4 className="mb-3 text-lg font-medium text-primary">
-                  Tech Stack
+                  {t("projects.techStackHeading")}
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.techStack.map((tech, idx) => (
@@ -404,20 +393,32 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
 
               <div className="flex flex-wrap gap-6 text-sm">
                 <div>
-                  <span className="font-medium">Status:</span>{" "}
+                  <span className="font-medium">
+                    {t("projects.status.label")}:
+                  </span>{" "}
                   {selectedProject.maintained ? (
-                    <span className="text-green-500">Maintained</span>
+                    <span className="text-green-500">
+                      {t("projects.status.maintained")}
+                    </span>
                   ) : (
-                    <span className="text-yellow-500">Archived</span>
+                    <span className="text-yellow-500">
+                      {t("projects.status.archived")}
+                    </span>
                   )}
                 </div>
 
                 <div>
-                  <span className="font-medium">Deployment:</span>{" "}
+                  <span className="font-medium">
+                    {t("projects.deployment.label")}:
+                  </span>{" "}
                   {selectedProject.deployed ? (
-                    <span className="text-green-500">Deployed</span>
+                    <span className="text-green-500">
+                      {t("projects.deployment.deployed")}
+                    </span>
                   ) : (
-                    <span className="text-gray-500">Not Deployed</span>
+                    <span className="text-gray-500">
+                      {t("projects.deployment.notDeployed")}
+                    </span>
                   )}
                 </div>
               </div>
@@ -427,7 +428,7 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
                   className="px-6 py-2 text-white transition-colors rounded bg-primary hover:bg-primary-hover"
                   onClick={closeModal}
                 >
-                  Tutup
+                  {t("projects.closeButton")}
                 </button>
               </div>
             </div>
