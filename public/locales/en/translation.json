@@ -1,0 +1,58 @@
+{
+  "navigation": {
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "language": {
+    "en": "English",
+    "id": "Indonesian"
+  },
+  "theme": {
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode"
+  },
+  "actions": {
+    "downloadCV": "Download CV"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Your Name",
+    "profession": "Full Stack Developer",
+    "description": "I build web applications with modern technologies that help businesses grow."
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a passionate full stack developer with experience in building responsive and performant web applications. I enjoy solving complex problems and learning new technologies.",
+    "experience": "Years of Experience",
+    "projects": "Projects Completed",
+    "clients": "Happy Clients"
+  },
+  "skills": {
+    "title": "My Skills",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "mobile": "Mobile Development",
+    "tools": "Tools & Technologies"
+  },
+  "projects": {
+    "title": "Recent Projects",
+    "viewAll": "View All Projects",
+    "viewDetails": "View Details",
+    "visitWebsite": "Visit Website"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send Message",
+    "success": "Your message has been sent successfully!",
+    "error": "There was an error sending your message. Please try again."
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "followMe": "Follow Me"
+  }
+}

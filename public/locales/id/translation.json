@@ -1,0 +1,58 @@
+{
+  "navigation": {
+    "home": "Beranda",
+    "skills": "Keahlian",
+    "projects": "Proyek",
+    "contact": "Kontak"
+  },
+  "language": {
+    "en": "Inggris",
+    "id": "Indonesia"
+  },
+  "theme": {
+    "darkMode": "Mode Gelap",
+    "lightMode": "Mode Terang"
+  },
+  "actions": {
+    "downloadCV": "Unduh CV"
+  },
+  "hero": {
+    "greeting": "Halo, Saya",
+    "name": "Nama Anda",
+    "profession": "Pengembang Full Stack",
+    "description": "Saya membangun aplikasi web dengan teknologi modern yang membantu bisnis berkembang."
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "description": "Saya adalah pengembang full stack yang bersemangat dengan pengalaman dalam membangun aplikasi web yang responsif dan berkinerja tinggi. Saya senang memecahkan masalah kompleks dan mempelajari teknologi baru.",
+    "experience": "Tahun Pengalaman",
+    "projects": "Proyek Selesai",
+    "clients": "Klien Puas"
+  },
+  "skills": {
+    "title": "Keahlian Saya",
+    "frontend": "Pengembangan Frontend",
+    "backend": "Pengembangan Backend",
+    "mobile": "Pengembangan Mobile",
+    "tools": "Alat & Teknologi"
+  },
+  "projects": {
+    "title": "Proyek Terbaru",
+    "viewAll": "Lihat Semua Proyek",
+    "viewDetails": "Lihat Detail",
+    "visitWebsite": "Kunjungi Website"
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "name": "Nama Anda",
+    "email": "Email Anda",
+    "message": "Pesan Anda",
+    "send": "Kirim Pesan",
+    "success": "Pesan Anda telah berhasil dikirim!",
+    "error": "Terjadi kesalahan saat mengirim pesan Anda. Silakan coba lagi."
+  },
+  "footer": {
+    "rights": "Seluruh hak cipta dilindungi",
+    "followMe": "Ikuti Saya"
+  }
+}
