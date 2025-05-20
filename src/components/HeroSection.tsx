@@ -55,12 +55,14 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="flex justify-center md:w-1/2 md:justify-end">
-        <img
-          src="https://placehold.co/300x300/png?text=Illustration+of+coder+in+action"
-          alt="Ilustrasi seorang backend developer dengan kode atau server"
-          className="h-auto w-72"
-          loading="lazy"
-        />
+        <div className="p-1 border-2 border-primary bg-bg-element w-fit">
+          <img
+            src="https://i.pinimg.com/736x/35/d7/7f/35d77fc6dba1171f679b5fcaa7049803.jpg"
+            alt="Ilustrasi seorang backend developer dengan kode atau server"
+            className="object-cover h-auto w-72"
+            loading="lazy"
+          />
+        </div>
       </div>
     </section>
   );

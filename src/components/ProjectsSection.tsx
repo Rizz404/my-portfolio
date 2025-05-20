@@ -26,7 +26,7 @@ const ProjectsSection = () => {
         "Platform e-commerce untuk jual beli kucing dengan berbagai fitur seperti filter, pencarian, dan sistem keranjang belanja.",
       category: "fullstack",
       techStack: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
-      image: "/api/placeholder/400/300?text=Cat+Marketplace",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: false,
     },
@@ -37,7 +37,7 @@ const ProjectsSection = () => {
         "Proyek frontend dengan fokus pada UI/UX modern dan responsif.",
       category: "frontend",
       techStack: ["React", "Tailwind CSS", "JavaScript"],
-      image: "/api/placeholder/400/300?text=Project+1",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
     },
@@ -48,7 +48,7 @@ const ProjectsSection = () => {
         "Website statis untuk keperluan tugas akhir semester dengan desain minimalis.",
       category: "frontend",
       techStack: ["HTML", "CSS", "JavaScript"],
-      image: "/api/placeholder/400/300?text=Web+Static+UAS",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: false,
     },
@@ -59,7 +59,7 @@ const ProjectsSection = () => {
         "Backend API untuk aplikasi media sosial dengan fitur autentikasi, posting, dan interaksi antar pengguna.",
       category: "backend",
       techStack: ["Express", "MongoDB", "JWT", "Node.js"],
-      image: "/api/placeholder/400/300?text=Social+Media+API",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: false,
       maintained: false,
     },
@@ -70,7 +70,7 @@ const ProjectsSection = () => {
         "API untuk aplikasi membaca dengan fitur bookmark, highlights, dan rekomendasi konten.",
       category: "backend",
       techStack: ["Express", "PostgreSQL", "TypeScript", "Node.js"],
-      image: "/api/placeholder/400/300?text=Magic+Scroll+API",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: false,
     },
@@ -81,7 +81,7 @@ const ProjectsSection = () => {
         "Aplikasi untuk memfasilitasi pendaftaran dan manajemen KKN/KKP mahasiswa.",
       category: "fullstack",
       techStack: ["PHP", "MySQL", "Bootstrap", "jQuery"],
-      image: "/api/placeholder/400/300?text=Sistem+Informasi+KKN",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
     },
@@ -92,7 +92,7 @@ const ProjectsSection = () => {
         "Backend API untuk aplikasi mood tracking dan jurnal kebahagiaan.",
       category: "backend",
       techStack: ["Express", "MongoDB", "JWT", "Node.js"],
-      image: "/api/placeholder/400/300?text=Happiness+Overload+API",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: false,
       maintained: false,
     },
@@ -103,7 +103,7 @@ const ProjectsSection = () => {
         "Versi yang ditingkatkan dari Happiness Overload API dengan fitur tambahan dan performa yang lebih baik.",
       category: "backend",
       techStack: ["NestJS", "PostgreSQL", "TypeScript", "Prisma"],
-      image: "/api/placeholder/400/300?text=Happiness+Overload+API+v2",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
     },
@@ -114,7 +114,7 @@ const ProjectsSection = () => {
         "Versi terbaru dari Magic Scroll API dengan arsitektur yang lebih baik dan fitur tambahan.",
       category: "backend",
       techStack: ["NestJS", "MongoDB", "TypeScript", "Redis"],
-      image: "/api/placeholder/400/300?text=Magic+Scroll+API+v2",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
     },
@@ -125,7 +125,7 @@ const ProjectsSection = () => {
         "Fun API dengan kumpulan gambar dan fakta tentang kucing Big Floppa.",
       category: "backend",
       techStack: ["Express", "MongoDB", "TypeScript", "Node.js"],
-      image: "/api/placeholder/400/300?text=Big+Floppa+API",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: false,
     },
@@ -136,7 +136,7 @@ const ProjectsSection = () => {
         "Aplikasi todo list sederhana dibuat dengan Flutter untuk Android dan iOS.",
       category: "mobile",
       techStack: ["Flutter", "Dart", "Firebase"],
-      image: "/api/placeholder/400/300?text=Simple+Flutter+Todo",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: false,
     },
@@ -147,7 +147,7 @@ const ProjectsSection = () => {
         "API untuk katalog dan informasi tentang senjata api menggunakan Flask.",
       category: "backend",
       techStack: ["Flask", "Python", "SQLAlchemy", "SQLite"],
-      image: "/api/placeholder/400/300?text=Gun+API+with+Flask",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: false,
       maintained: false,
     },
@@ -158,7 +158,7 @@ const ProjectsSection = () => {
         "Aplikasi mobile yang dibuat untuk tugas akhir semester dengan fokus pada UI/UX.",
       category: "mobile",
       techStack: ["Flutter", "Dart", "Firebase"],
-      image: "/api/placeholder/400/300?text=UAS+Mobile",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: false,
       maintained: false,
     },
@@ -169,7 +169,7 @@ const ProjectsSection = () => {
         "API untuk aplikasi e-book dengan standar REST API yang konsisten.",
       category: "backend",
       techStack: ["Express", "PostgreSQL", "TypeScript", "Node.js"],
-      image: "/api/placeholder/400/300?text=E-Book+API",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
     },
@@ -180,7 +180,7 @@ const ProjectsSection = () => {
         "Backend untuk aplikasi manajemen bengkel dengan fitur inventaris dan pelacakan servis.",
       category: "backend",
       techStack: ["Express", "MongoDB", "JWT", "Node.js"],
-      image: "/api/placeholder/400/300?text=Tegar+Workshop+Server",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
     },
@@ -191,7 +191,7 @@ const ProjectsSection = () => {
         "Aplikasi untuk membantu calon mahasiswa memilih jurusan berdasarkan minat dan kemampuan.",
       category: "fullstack",
       techStack: ["Laravel", "MySQL", "Bootstrap", "jQuery"],
-      image: "/api/placeholder/400/300?text=Rekomendasi+Jurusan",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: false,
     },
@@ -201,7 +201,7 @@ const ProjectsSection = () => {
       description: "Backend untuk aplikasi katalog warna dan jenis cat mobil.",
       category: "backend",
       techStack: ["Express", "MongoDB", "Node.js"],
-      image: "/api/placeholder/400/300?text=Car+Paint+Server",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: false,
       maintained: false,
     },
@@ -212,7 +212,7 @@ const ProjectsSection = () => {
         "Aplikasi mobile dengan fitur interaktif dan animasi modern.",
       category: "mobile",
       techStack: ["Flutter", "Dart", "GetX", "Firebase"],
-      image: "/api/placeholder/400/300?text=Project+3",
+      image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
     },
@@ -252,7 +252,6 @@ const ProjectsSection = () => {
         <strong className="miku-text-gradient">Proyek</strong> Saya
       </h2>
 
-      {/* Category filters */}
       <div className="flex flex-wrap justify-center gap-3 mb-10">
         {categories.map((category) => (
           <button
@@ -269,7 +268,6 @@ const ProjectsSection = () => {
         ))}
       </div>
 
-      {/* Projects Grid */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {filteredProjects.map((project) => (
           <div
@@ -331,7 +329,6 @@ const ProjectsSection = () => {
         ))}
       </div>
 
-      {/* If no projects match filter */}
       {filteredProjects.length === 0 && (
         <div className="py-20 text-center">
           <p className="text-text-secondary">
@@ -340,7 +337,6 @@ const ProjectsSection = () => {
         </div>
       )}
 
-      {/* Project Modal */}
       {modalOpen && selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-10 overflow-y-auto bg-black bg-opacity-70">
           <div

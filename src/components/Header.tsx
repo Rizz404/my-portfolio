@@ -73,9 +73,13 @@ const Header = () => {
             )}
           </button>
 
-          <button className="btn btn-primary" type="button">
+          <a
+            className="btn btn-primary"
+            href="/cv-rizqiansyah-ramadhan.pdf"
+            download="cv-rizqiansyah-ramadhan.pdf"
+          >
             {t("actions.downloadCV")}
-          </button>
+          </a>
         </div>
 
         <button
@@ -132,9 +136,13 @@ const Header = () => {
                     <option value="id">{t("language.id")}</option>
                   </select>
                 </div>
-                <button className="w-full mt-4 btn btn-primary" type="button">
+                <a
+                  className="w-full mt-4 btn btn-primary"
+                  href="/cv-rizqiansyah-ramadhan.pdf"
+                  download="cv-rizqiansyah-ramadhan.pdf"
+                >
                   {t("actions.downloadCV")}
-                </button>
+                </a>
               </div>
             </nav>
           </div>
