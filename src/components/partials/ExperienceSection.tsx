@@ -111,7 +111,6 @@ const ExperienceSection = ({ id }: ExperienceSectionProps) => {
         <strong className="miku-text-gradient">
           {t("experience.heading1")}
         </strong>{" "}
-        {t("experience.heading2")}
       </h2>
 
       <div className="space-y-6">

@@ -35,11 +35,18 @@
   },
   "skills": {
     "heading": "My",
-    "heading2": "Skills"
+    "heading2": "Skills",
+    "categories": {
+      "all": "all",
+      "backend": "backend",
+      "database": "database",
+      "tools": "tools"
+    },
+    "showMore": "Show More",
+    "showLess": "Show Less"
   },
   "experience": {
-    "heading1": "Professional",
-    "heading2": "Experience",
+    "heading1": "Experience",
     "currentFocus": "Currently focused on gaining practical experience and completing my education at",
     "universityName": "Global Institute Technology And Business",
     "universityPeriod": "(2022-2025).",
@@ -82,6 +89,8 @@
       "fullstack": "Fullstack",
       "mobile": "Mobile"
     },
+    "showMore": "Show More",
+    "showLess": "Show Less",
     "status": {
       "deployed": "deployed",
       "development": "development",

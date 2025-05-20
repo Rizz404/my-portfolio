@@ -67,8 +67,8 @@ const Header = () => {
             onChange={handleLanguageChange}
             className="px-2 py-1 text-sm border rounded bg-bg-alt text-text-primary border-secondary font-body focus:outline-none focus:ring-1 focus:ring-primary"
           >
-            <option value="en">{t("language.en")}</option>
-            <option value="id">{t("language.id")}</option>
+            <option value="en">En</option>
+            <option value="id">Id</option>
           </select>
 
           <button
