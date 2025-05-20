@@ -1,4 +1,6 @@
-// import { useState } from "react";
+interface ExperienceSectionProps {
+  id: string;
+}
 
 type Experience = {
   company: string;
@@ -8,9 +10,7 @@ type Experience = {
   icon?: string;
 };
 
-const ExperienceSection = () => {
-  // const [showAll, setShowAll] = useState(false);
-
+const ExperienceSection = ({ id }: ExperienceSectionProps) => {
   const experiences: Experience[] = [
     {
       company: "PT. Sanken Indonesia",
@@ -104,7 +104,7 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section className="max-w-5xl px-4 mx-auto mt-20">
+    <section id={id} className="max-w-5xl px-4 mx-auto mt-20">
       <h2 className="mb-6 text-xl font-semibold text-center">
         <strong className="miku-text-gradient">Pengalaman</strong> Profesional
       </h2>

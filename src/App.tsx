@@ -12,12 +12,12 @@ const App = () => {
     <>
       <Header />
       <main className="container px-6">
-        <HeroSection />
-        <SkillsSection />
-        <ExperienceSection />
-        <AboutMeSection />
-        <ProjectsSection />
-        <ContactSection />
+        <HeroSection id="hero" />
+        <SkillsSection id="skills" />
+        <ExperienceSection id="experience" />
+        <AboutMeSection id="about-me" />
+        <ProjectsSection id="projects" />
+        <ContactSection id="contact" />
       </main>
       <Footer />
     </>

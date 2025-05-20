@@ -1,6 +1,13 @@
-const AboutMeSection = () => {
+interface AboutMeSectionProps {
+  id: string;
+}
+
+const AboutMeSection = ({ id }: AboutMeSectionProps) => {
   return (
-    <section className="flex flex-col items-center max-w-5xl gap-10 px-4 mx-auto mt-20 md:flex-row md:items-start">
+    <section
+      id={id}
+      className="flex flex-col items-center max-w-5xl gap-10 px-4 mx-auto mt-20 md:flex-row md:items-start"
+    >
       <div className="flex justify-center md:w-1/3 md:justify-start">
         <div className="p-1 overflow-hidden border-2 rounded w-60 h-60 bg-bg-element border-primary">
           <img

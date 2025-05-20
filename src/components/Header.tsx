@@ -9,23 +9,32 @@ const Header = () => {
   const { t, language, setLanguage } = useLocalization();
 
   const links = [
-    {
-      href: "#",
-      title: t("navigation.home"),
-    },
-    {
-      href: "#",
-      title: t("navigation.skills"),
-    },
-    {
-      href: "#",
-      title: t("navigation.projects"),
-    },
-    {
-      href: "#",
-      title: t("navigation.contact"),
-    },
+    { href: "#hero", title: t("navigation.home") },
+    { href: "#skills", title: t("navigation.skills") },
+    { href: "#about-me", title: t("navigation.aboutMe") },
+    { href: "#experience", title: t("navigation.experience") },
+    { href: "#projects", title: t("navigation.projects") },
+    { href: "#contact", title: t("navigation.contact") },
   ];
+
+  const handleNavLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    // * Mencegah perilaku default link (jump langsung)
+    e.preventDefault();
+    // * Hapus '#' dari href
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    setIsMenuOpen(false);
+  };
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLanguage = e.target.value as Language;
@@ -44,6 +53,7 @@ const Header = () => {
             <a
               key={index}
               href={link.href}
+              onClick={(e) => handleNavLinkClick(e, link.href)}
               className="transition-colors text-text-primary hover:text-primary"
             >
               {link.title}
@@ -100,8 +110,8 @@ const Header = () => {
                 <a
                   key={index}
                   href={link.href}
+                  onClick={(e) => handleNavLinkClick(e, link.href)}
                   className="py-2 font-medium transition-colors text-text-primary hover:text-primary font-heading"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {link.title}
                 </a>

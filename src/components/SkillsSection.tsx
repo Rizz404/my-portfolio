@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+interface SkillsSectionProps {
+  id: string;
+}
 type Skill = { name: string; icon: string };
 type SkillsByCategory = {
   all: Skill[];
@@ -8,7 +11,7 @@ type SkillsByCategory = {
   tools: Skill[];
 };
 
-const SkillsSection = () => {
+const SkillsSection = ({ id }: SkillsSectionProps) => {
   type Category = "all" | "backend" | "database" | "tools";
   const [activeCategory, setActiveCategory] = useState<Category>("all");
 
@@ -50,7 +53,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="max-w-4xl mx-auto mt-20">
+    <section id={id} className="max-w-4xl mx-auto mt-20">
       <h2 className="mb-6 text-xl font-semibold text-center">
         My <strong className="miku-text-gradient">Technical Skills</strong>
       </h2>

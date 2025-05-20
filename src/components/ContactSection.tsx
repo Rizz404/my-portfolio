@@ -1,6 +1,10 @@
-const ContactSection = () => {
+interface ContactSectionProps {
+  id: string;
+}
+
+const ContactSection = ({ id }: ContactSectionProps) => {
   return (
-    <section className="mt-20 mb-16">
+    <section id={id} className="mt-20 mb-16">
       <div className="container">
         <h2 className="mb-6 text-xl font-semibold text-center">
           Contact <strong className="miku-text-gradient">Me</strong>

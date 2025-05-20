@@ -1,6 +1,13 @@
-const HeroSection = () => {
+interface HeroSectionProps {
+  id: string;
+}
+
+const HeroSection = ({ id }: HeroSectionProps) => {
   return (
-    <section className="flex flex-col items-center justify-between gap-10 mt-10 md:flex-row md:items-start md:mt-20 md:gap-0">
+    <section
+      id={id}
+      className="flex flex-col items-center justify-between gap-10 mt-10 md:flex-row md:items-start md:mt-20 md:gap-0"
+    >
       <div className="max-w-lg md:w-1/2">
         <h1 className="text-3xl font-semibold leading-tight md:text-4xl font-heading">
           Hello I'm <strong>Rizqiansyah Ramadhan.</strong>

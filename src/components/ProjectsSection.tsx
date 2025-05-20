@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+interface ProjectsSectionProps {
+  id: string;
+}
+
 type ProjectCategory = "all" | "frontend" | "backend" | "fullstack" | "mobile";
 
 type Project = {
@@ -13,7 +17,7 @@ type Project = {
   maintained: boolean;
 };
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ id }: ProjectsSectionProps) => {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
@@ -247,7 +251,7 @@ const ProjectsSection = () => {
   }
 
   return (
-    <section className="px-4 mx-auto mt-20 max-w-7xl">
+    <section id={id} className="px-4 mx-auto mt-20 max-w-7xl">
       <h2 className="mb-6 text-xl font-semibold text-center">
         <strong className="miku-text-gradient">Proyek</strong> Saya
       </h2>
