@@ -1,15 +1,16 @@
-import AboutMeSection from "./components/AboutMeSection";
-import ContactSection from "./components/ContactSection";
-import ExperienceSection from "./components/ExperienceSection";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import ProjectsSection from "./components/ProjectsSection";
-import SkillsSection from "./components/SkillsSection";
+import AboutMeSection from "./components/partials/AboutMeSection";
+import ContactSection from "./components/partials/ContactSection";
+import ExperienceSection from "./components/partials/ExperienceSection";
+import Footer from "./components/partials/Footer";
+import Header from "./components/partials/Header";
+import HeroSection from "./components/partials/HeroSection";
+import ProjectsSection from "./components/partials/ProjectsSection";
+import SkillsSection from "./components/partials/SkillsSection";
+import AppWrapper from "./components/ui/AppWrapper";
 
 const App = () => {
   return (
-    <>
+    <AppWrapper>
       <Header />
       <main className="container px-6">
         <HeroSection id="hero" />
@@ -20,7 +21,8 @@ const App = () => {
         <ContactSection id="contact" />
       </main>
       <Footer />
-    </>
+    </AppWrapper>
   );
 };
+
 export default App;

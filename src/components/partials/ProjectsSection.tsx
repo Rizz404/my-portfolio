@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocalization } from "../hooks/useLocalization";
+import { useLocalization } from "../../hooks/useLocalization";
 
 interface ProjectsSectionProps {
   id: string;

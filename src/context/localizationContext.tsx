@@ -1,17 +1,20 @@
 import { createContext } from "react";
+import type { TFunction } from "i18next";
 
-// * Definisi tipe untuk bahasa yang didukung
 export type Language = "en" | "id";
 
-export interface LocalizationContextType {
+interface LocalizationContextType {
   language: Language;
-  setLanguage: (language: Language) => void;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  t: (key: string, options?: any) => string;
+  setLanguage: (lang: Language) => void;
+  isChangingLanguage: boolean;
+  t: TFunction;
   isRTL: boolean;
 }
 
-// * Buat context untuk lokalisasi
-export const LocalizationContext = createContext<
-  LocalizationContextType | undefined
->(undefined);
+export const LocalizationContext = createContext<LocalizationContextType>({
+  language: "en",
+  setLanguage: () => {},
+  isChangingLanguage: false,
+  t: ((key: string) => key) as TFunction,
+  isRTL: false,
+});

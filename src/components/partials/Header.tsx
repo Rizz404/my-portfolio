@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useTheme } from "../hooks/useTheme";
-import { useLocalization } from "../hooks/useLocalization";
-import type { Language } from "../context/localizationContext";
+import { useTheme } from "../../hooks/useTheme";
+import { useLocalization } from "../../hooks/useLocalization";
+import type { Language } from "../../context/localizationContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,4 +1,4 @@
-import { useLocalization } from "../hooks/useLocalization";
+import { useLocalization } from "../../hooks/useLocalization";
 
 interface ExperienceSectionProps {
   id: string;

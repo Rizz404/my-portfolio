@@ -1,3 +1,4 @@
+// src/routes/router.tsx
 import { createBrowserRouter, Navigate, Outlet } from "react-router-dom";
 import { Suspense, lazy, useEffect } from "react";
 import type { Language } from "../context/localizationContext";
@@ -21,6 +22,7 @@ const LanguageWrapper = ({ language, children }: LanguageWrapperProps) => {
   const { setLanguage } = useLocalization();
 
   useEffect(() => {
+    // Pastikan bahasa disetel pada mount komponen
     setLanguage(language);
   }, [language, setLanguage]);
 
@@ -28,6 +30,13 @@ const LanguageWrapper = ({ language, children }: LanguageWrapperProps) => {
 };
 
 const getDefaultLanguage = (): Language => {
+  // Periksa localStorage dulu untuk mempertahankan preferensi bahasa pengguna
+  const savedLang = localStorage.getItem("i18nextLng")?.substring(0, 2);
+  if (savedLang === "id" || savedLang === "en") {
+    return savedLang as Language;
+  }
+
+  // Fallback ke bahasa browser
   const browserLang = navigator.language.substring(0, 2);
   return browserLang === "id" ? "id" : "en";
 };
@@ -43,14 +52,14 @@ const LocalizedAppLayout = () => {
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <LocalizedAppLayout />, // Gunakan layout ini sebagai elemen rute dasar
+    element: <LocalizedAppLayout />,
     children: [
       {
-        index: true, // Cocok untuk path "/"
+        index: true,
         element: <Navigate to={`/${getDefaultLanguage()}`} replace />,
       },
       {
-        path: "en", // Rute untuk Bahasa Inggris
+        path: "en",
         element: (
           <LanguageWrapper language="en">
             <Suspense fallback={<Loading />}>
@@ -60,7 +69,7 @@ const appRouter = createBrowserRouter([
         ),
       },
       {
-        path: "id", // Rute untuk Bahasa Indonesia
+        path: "id",
         element: (
           <LanguageWrapper language="id">
             <Suspense fallback={<Loading />}>
@@ -68,6 +77,11 @@ const appRouter = createBrowserRouter([
             </Suspense>
           </LanguageWrapper>
         ),
+      },
+      // Fallback untuk path yang tidak dikenal
+      {
+        path: "*",
+        element: <Navigate to={`/${getDefaultLanguage()}`} replace />,
       },
     ],
   },
