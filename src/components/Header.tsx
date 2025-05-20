@@ -75,29 +75,29 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-bg-element shadow-md">
+    <header className="shadow-md bg-bg-element">
       <div className="container flex items-center justify-between px-6 py-4 mx-auto max-w-7xl">
         <div className="flex items-center space-x-2">
           <i className="text-2xl miku-text-gradient fas fa-atom"></i>
         </div>
 
-        <nav className="hidden space-x-8 text-sm font-heading font-medium md:flex">
+        <nav className="hidden space-x-8 text-sm font-medium font-heading md:flex">
           {links.map((link, index) => (
             <a
               key={index}
               href={link.href}
-              className="text-text-primary hover:text-primary transition-colors"
+              className="transition-colors text-text-primary hover:text-primary"
             >
               {link.title}
             </a>
           ))}
         </nav>
 
-        <div className="hidden items-center space-x-4 md:flex">
+        <div className="items-center hidden space-x-4 md:flex">
           <select
             value={language}
             onChange={handleLanguageChange}
-            className="bg-bg-alt text-text-primary border border-secondary rounded px-2 py-1 text-sm font-body focus:outline-none focus:ring-1 focus:ring-primary"
+            className="px-2 py-1 text-sm border rounded bg-bg-alt text-text-primary border-secondary font-body focus:outline-none focus:ring-1 focus:ring-primary"
           >
             <option value="en">EN</option>
             <option value="id">ID</option>
@@ -105,7 +105,7 @@ const Header = () => {
 
           <button
             onClick={toggleDarkMode}
-            className="text-text-primary hover:text-primary transition-colors cursor-pointer"
+            className="transition-colors cursor-pointer text-text-primary hover:text-primary"
             aria-label={isDarkMode ? t.lightMode : t.darkMode}
           >
             {isDarkMode ? (
@@ -131,27 +131,27 @@ const Header = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-bg-element border-t border-secondary-disabled">
-          <div className="container mx-auto px-6 py-4">
+        <div className="border-t md:hidden bg-bg-element border-secondary-disabled">
+          <div className="container px-6 py-4 mx-auto">
             <nav className="flex flex-col space-y-4">
               {links.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
-                  className="text-text-primary hover:text-primary font-heading font-medium transition-colors py-2"
+                  className="py-2 font-medium transition-colors text-text-primary hover:text-primary font-heading"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.title}
                 </a>
               ))}
-              <div className="border-t border-secondary-disabled pt-4 flex flex-col space-y-4">
+              <div className="flex flex-col pt-4 space-y-4 border-t border-secondary-disabled">
                 <div className="flex items-center justify-between">
                   <span className="text-text-primary">
                     {isDarkMode ? t.lightMode : t.darkMode}
                   </span>
                   <button
                     onClick={toggleDarkMode}
-                    className="text-text-primary hover:text-primary transition-colors"
+                    className="transition-colors text-text-primary hover:text-primary"
                     aria-label={isDarkMode ? t.lightMode : t.darkMode}
                   >
                     {isDarkMode ? (
@@ -166,14 +166,13 @@ const Header = () => {
                   <select
                     value={language}
                     onChange={handleLanguageChange}
-                    className="bg-bg-alt text-text-primary border border-secondary rounded px-2 py-1 text-sm font-body focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="px-2 py-1 text-sm border rounded bg-bg-alt text-text-primary border-secondary font-body focus:outline-none focus:ring-1 focus:ring-primary"
                   >
                     <option value="en">English</option>
                     <option value="id">Indonesia</option>
-                    <option value="jp">日本語</option>
                   </select>
                 </div>
-                <button className="btn btn-primary w-full mt-4" type="button">
+                <button className="w-full mt-4 btn btn-primary" type="button">
                   {t.downloadCV}
                 </button>
               </div>

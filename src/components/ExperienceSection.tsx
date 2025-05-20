@@ -41,28 +41,28 @@ const ExperienceSection = () => {
     isHighlighted: boolean;
   }) => {
     return isHighlighted ? (
-      <article className="bg-bg-element p-5 rounded-lg shadow-md border-l-4 border-primary">
+      <article className="p-5 border-l-4 rounded-lg shadow-md bg-bg-element border-primary">
         <div className="flex items-center mb-2">
           {experience.icon && (
-            <div className="text-primary text-2xl mr-3">
+            <div className="mr-3 text-2xl text-primary">
               <i className={experience.icon}></i>
             </div>
           )}
           <div>
-            <h3 className="font-semibold text-lg miku-text-gradient">
+            <h3 className="text-lg font-semibold miku-text-gradient">
               {experience.position} @ {experience.company}
             </h3>
-            <p className="text-text-tertiary text-xs">{experience.period}</p>
+            <p className="text-xs text-text-tertiary">{experience.period}</p>
           </div>
         </div>
-        <ul className="space-y-2 mt-3">
+        <ul className="mt-3 space-y-2">
           {experience.description.map((item, index) => (
             <li
               key={index}
-              className="text-text-secondary text-sm flex items-start"
+              className="flex items-start text-sm text-text-secondary"
             >
-              <div className="flex items-start md:items-center gap-2">
-                <span className="text-primary mt-1">
+              <div className="flex items-start gap-2 md:items-center">
+                <span className="mt-1 text-primary">
                   <i className="fas fa-check-circle"></i>
                 </span>
                 <span>{item}</span>
@@ -74,22 +74,22 @@ const ExperienceSection = () => {
     ) : (
       <article className="flex items-start space-x-4">
         {experience.icon && (
-          <div className="text-primary text-2xl mt-1">
+          <div className="mt-1 text-2xl text-primary">
             <i className={experience.icon}></i>
           </div>
         )}
         <div>
-          <h3 className="font-semibold text-lg">
+          <h3 className="text-lg font-semibold">
             {experience.position} @ {experience.company}
           </h3>
-          <ul className="space-y-1 mt-2">
+          <ul className="mt-2 space-y-1">
             {experience.description.map((item, index) => (
               <li
                 key={index}
-                className="text-text-secondary text-sm flex items-start"
+                className="flex items-start text-sm text-text-secondary"
               >
-                <div className="flex items-start md:items-center gap-2">
-                  <span className="text-primary mt-1 text-xs">
+                <div className="flex items-start gap-2 md:items-center">
+                  <span className="mt-1 text-xs text-primary">
                     <i className="fas fa-circle"></i>
                   </span>
                   <span>{item}</span>
@@ -97,16 +97,16 @@ const ExperienceSection = () => {
               </li>
             ))}
           </ul>
-          <p className="text-text-tertiary text-xs mt-1">{experience.period}</p>
+          <p className="mt-1 text-xs text-text-tertiary">{experience.period}</p>
         </div>
       </article>
     );
   };
 
   return (
-    <section className="mt-20 max-w-5xl mx-auto px-4">
-      <h2 className="text-xl font-semibold mb-6 text-center">
-        Pengalaman <strong className="miku-text-gradient">Profesional</strong>
+    <section className="max-w-5xl px-4 mx-auto mt-20">
+      <h2 className="mb-6 text-xl font-semibold text-center">
+        <strong className="miku-text-gradient">Pengalaman</strong> Profesional
       </h2>
 
       <div className="space-y-6">
@@ -120,10 +120,10 @@ const ExperienceSection = () => {
       </div>
 
       <div className="mt-8 text-center">
-        <p className="text-text-secondary text-sm italic">
+        <p className="text-sm italic text-text-secondary">
           Saat ini fokus untuk mendapatkan pengalaman praktis dan menyelesaikan
           pendidikan saya di
-          <span className="text-primary font-medium">
+          <span className="font-medium text-primary">
             {" "}
             Global Institute Technology And Business
           </span>{" "}

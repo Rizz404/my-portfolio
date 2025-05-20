@@ -50,19 +50,19 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="mt-20 max-w-4xl mx-auto">
-      <h2 className="text-center text-xl font-semibold mb-6">
+    <section className="max-w-4xl mx-auto mt-20">
+      <h2 className="mb-6 text-xl font-semibold text-center">
         My <strong className="miku-text-gradient">Technical Skills</strong>
       </h2>
 
-      <div className="flex justify-center mb-8 space-x-4 flex-wrap">
+      <div className="flex flex-wrap justify-center mb-8 space-x-4">
         {categories.map((category) => (
           <button
             key={category.id}
-            className={`px-4 py-2 rounded text-sm font-semibold transition-colors ${
+            className={`px-4 py-2 rounded text-sm font-semibold transition-colors cursor-pointer ${
               activeCategory === category.id
-                ? "bg-primary text-text-inverted"
-                : "border border-gray-300 hover:miku-border hover:text-primary"
+                ? "bg-primary-active text-text-inverted"
+                : "border border-secondary hover:border-secondary-hover hover:text-primary"
             }`}
             onClick={() => setActiveCategory(category.id as Category)}
           >
@@ -71,11 +71,11 @@ const SkillsSection = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 text-text-primary max-w-4xl mx-auto">
+      <div className="grid max-w-4xl grid-cols-3 gap-4 mx-auto sm:grid-cols-4 md:grid-cols-6 text-text-primary">
         {skills[activeCategory].map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center border border-gray-300 rounded p-4 hover:bg-bg-hover hover:miku-border transition-colors"
+            className="flex flex-col items-center justify-center p-4 transition-colors border rounded cursor-pointer border-secondary hover:bg-bg-hover hover:border-secondary-hover"
           >
             <i className={`${skill.icon} text-2xl mb-2 text-primary`}></i>
             <span className="text-xs font-semibold text-center">

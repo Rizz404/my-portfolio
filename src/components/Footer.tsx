@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="mt-20 border-t border-gray-700 py-6 px-6 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto text-white text-xs">
-      <p>© 2023 Evren Shah</p>
-      <p>Designed and Developed by Evren Shah</p>
+    <footer className="flex flex-col items-center justify-between px-6 py-6 mx-auto mt-20 text-xs border-t border-secondary md:flex-row max-w-7xl">
+      <p>© 2025 Rizqiansyah</p>
+      <p>Designed and Developed by Rizqiansyah</p>
     </footer>
   );
 };
