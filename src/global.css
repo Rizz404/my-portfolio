@@ -1,0 +1,180 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Exo+2:wght@200;300;400;500;600;700&display=swap");
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+  --color-primary-focus: var(--primary-focus);
+  --color-primary-disabled: var(--primary-disabled);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-active: var(--secondary-active);
+  --color-secondary-focus: var(--secondary-focus);
+  --color-secondary-disabled: var(--secondary-disabled);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-active: var(--accent-active);
+  --color-accent-focus: var(--accent-focus);
+  --color-accent-disabled: var(--accent-disabled);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-muted: var(--text-muted);
+  --color-text-inverted: var(--text-inverted);
+
+  --color-bg-main: var(--bg-main);
+  --color-bg-alt: var(--bg-alt);
+  --color-bg-muted: var(--bg-muted);
+  --color-bg-element: var(--bg-element);
+  --color-bg-hover: var(--bg-hover);
+  --color-bg-active: var(--bg-active);
+
+  --font-heading: var(--heading-font);
+  --font-body: var(--body-font);
+}
+
+:root {
+  --primary: #39c5bb;
+  --primary-hover: #2fb3a9;
+  --primary-active: #25a095;
+  --primary-focus: #33bcb2;
+  --primary-disabled: #7ddad3;
+
+  --secondary: #6d7f8c;
+  --secondary-hover: #5d6e7a;
+  --secondary-active: #4e5d68;
+  --secondary-focus: #637382;
+  --secondary-disabled: #8e9ca8;
+
+  --accent: #fb8ba0;
+  --accent-hover: #fa768c;
+  --accent-active: #f96179;
+  --accent-focus: #fa8196;
+  --accent-disabled: #fca7b8;
+
+  --text-primary: #2c3e50;
+  --text-secondary: #4a5568;
+  --text-tertiary: #718096;
+  --text-muted: #a0aec0;
+  --text-inverted: #f7fafc;
+
+  --bg-main: #f0fffd;
+  --bg-alt: #e0f7f5;
+  --bg-muted: #d0efed;
+  --bg-element: #e6faf8;
+  --bg-hover: #daf5f3;
+  --bg-active: #c5eeeb;
+
+  --heading-font: "Exo 2", sans-serif;
+  --body-font: "Quicksand", sans-serif;
+}
+
+.dark {
+  --primary: #39c5bb;
+  --primary-hover: #4ad1c7;
+  --primary-active: #5ddad1;
+  --primary-focus: #44cdc3;
+  --primary-disabled: #277f78;
+
+  --secondary: #8498a7;
+  --secondary-hover: #95a7b4;
+  --secondary-active: #a6b6c1;
+  --secondary-focus: #8fa2af;
+  --secondary-disabled: #667885;
+
+  --accent: #fb8ba0;
+  --accent-hover: #fc9eb0;
+  --accent-active: #fdb0c0;
+  --accent-focus: #fc95aa;
+  --accent-disabled: #d46f82;
+
+  --text-primary: #e2f5f3;
+  --text-secondary: #c7e5e2;
+  --text-tertiary: #a0d0cc;
+  --text-muted: #7ab0ac;
+  --text-inverted: #1a2a36;
+
+  --bg-main: #111923;
+  --bg-alt: #192630;
+  --bg-muted: #22333f;
+  --bg-element: #1d2d38;
+  --bg-hover: #263945;
+  --bg-active: #2f4452;
+}
+
+@layer base {
+  * {
+    @apply font-body text-text-primary transition-colors duration-200;
+  }
+  body {
+    @apply bg-bg-main min-h-screen;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-medium;
+  }
+  h1 {
+    @apply text-4xl mb-6 text-primary;
+  }
+  h2 {
+    @apply text-3xl mb-5;
+  }
+  h3 {
+    @apply text-2xl mb-4;
+  }
+  h4 {
+    @apply text-xl mb-3;
+  }
+  a {
+    @apply text-primary hover:text-primary-hover;
+  }
+  p {
+    @apply mb-4;
+  }
+  button {
+    @apply font-heading font-medium;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-full font-medium transition-all duration-200;
+  }
+  .btn-primary {
+    @apply bg-primary text-text-inverted hover:bg-primary-hover active:bg-primary-active focus:ring-2 focus:ring-primary-focus focus:outline-none disabled:bg-primary-disabled;
+  }
+  .btn-secondary {
+    @apply bg-secondary text-text-inverted hover:bg-secondary-hover active:bg-secondary-active focus:ring-2 focus:ring-secondary-focus focus:outline-none disabled:bg-secondary-disabled;
+  }
+  .btn-accent {
+    @apply bg-accent text-text-inverted hover:bg-accent-hover active:bg-accent-active focus:ring-2 focus:ring-accent-focus focus:outline-none disabled:bg-accent-disabled;
+  }
+  .card {
+    @apply bg-bg-element rounded-xl p-6 shadow-md;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto px-4 max-w-7xl;
+  }
+  .miku-gradient {
+    @apply bg-gradient-to-r from-primary to-accent;
+  }
+  .miku-text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  .miku-border {
+    @apply border-2 border-primary;
+  }
+}
