@@ -19,13 +19,13 @@
     "downloadCV": "Download CV"
   },
   "hero": {
-    "greeting": "Hello I'm",
+    "greeting": "Hello, I'm",
     "name": "Rizqiansyah Ramadhan.",
     "role": "Backend",
     "developer": "Developer",
     "location": "Based In",
     "city": "Tangerang, Banten.",
-    "bio": "Software Engineering student specializing in backend development, experienced in building and managing APIs using Express, NestJS, Flask, and Laravel, as well as proficient in database management such as MongoDB, MySQL, and PostgreSQL. Ready to contribute to impactful projects.",
+    "bio": "An undergraduate Software Engineering student specializing in backend development, with experience in building and managing APIs. Proficient with a diverse tech stack including Go (Golang), Express, NestJS, Flask, and Laravel. Skilled in various databases and familiar with mobile development using Flutter. Eager to learn and contribute to impactful projects.",
     "emailAriaLabel": "Email",
     "githubAriaLabel": "GitHub",
     "linkedinAriaLabel": "LinkedIn",
@@ -53,7 +53,7 @@
     "sanken": {
       "position": "Internship - Quality Control",
       "period": "2023 - 2024",
-      "description1": "Performed quality checks on refrigerator units to ensure compliance with company standards.",
+      "description1": "Conducted quality checks on refrigerator units to ensure compliance with company standards.",
       "description2": "Collaborated with the production team to identify and resolve defects during the manufacturing process."
     },
     "visionet": {
@@ -66,18 +66,21 @@
     "heading1": "About",
     "heading2": "Me",
     "imageAlt": "Rizqiansyah Ramadhan's profile picture",
-    "paragraph1": "A Software Engineering student currently pursuing education at Global Institute Technology And Business, specializing in backend development. I have experience in building and managing APIs using various backend frameworks such as Express, NestJS, Flask, and Laravel.",
-    "paragraph2": "Proficient in database management using MongoDB, MySQL, PostgreSQL, SQLite, and Firebase. Possess a strong understanding of frontend concepts and workflows for effective API integration.",
+    "paragraph1": "An undergraduate Software Engineering student at Global Institute Technology And Business with a specialization in backend development. I have experience building and managing APIs using a diverse tech stack including Go (Golang), Express, NestJS, Flask, and Laravel. ",
+    "paragraph2": "Skilled in various databases like MongoDB, MySQL, PostgreSQL, SQLite, and Firebase, with a solid understanding of frontend integration.  Also familiar with mobile development using Flutter. ",
     "additionalSkillsHeading": "Additional Skills",
     "additionalSkills": [
       "Collaboration",
       "Communication",
-      "Problem Solving",
+      "Problem-Solving",
       "Time Management"
     ],
     "languagesHeading": "Languages",
-    "languages": ["Indonesian (Native)", "English (Intermediate)"],
-    "quote": "Always eager to learn and contribute to impactful projects."
+    "languages": [
+      "Indonesian (Native)",
+      "English (Intermediate)"
+    ],
+    "quote": "Eager to learn and contribute to impactful projects. "
   },
   "projects": {
     "heading1": "My",

@@ -2,7 +2,7 @@
   "navigation": {
     "home": "Beranda",
     "skills": "Keahlian",
-    "aboutMe": "About Me",
+    "aboutMe": "Tentang Saya",
     "experience": "Pengalaman",
     "projects": "Proyek",
     "contact": "Kontak"
@@ -25,7 +25,7 @@
     "developer": "Developer",
     "location": "Berbasis di",
     "city": "Tangerang, Banten.",
-    "bio": "Mahasiswa Teknik Perangkat Lunak dengan spesialisasi pengembangan backend, berpengalaman dalam membangun dan mengelola API menggunakan Express, NestJS, Flask, dan Laravel, serta mahir dalam manajemen database seperti MongoDB, MySQL, dan PostgreSQL. Siap berkontribusi dalam proyek-proyek berdampak.",
+    "bio": "Mahasiswa Sarjana Teknik Perangkat Lunak dengan spesialisasi dalam pengembangan backend, berpengalaman dalam membangun dan mengelola API. Mahir dengan beragam tumpukan teknologi termasuk Go (Golang), Express, NestJS, Flask, dan Laravel. Terampil dalam berbagai database seperti MongoDB, MySQL, PostgreSQL, SQLite, dan Firebase, serta memiliki pemahaman yang kuat tentang integrasi frontend.",
     "emailAriaLabel": "Email",
     "githubAriaLabel": "GitHub",
     "linkedinAriaLabel": "LinkedIn",
@@ -34,7 +34,7 @@
     "imageAlt": "Ilustrasi seorang backend developer dengan kode atau server"
   },
   "skills": {
-    "heading": "Skill",
+    "heading": "Keahlian",
     "heading2": "Saya",
     "categories": {
       "all": "all",
@@ -66,8 +66,8 @@
     "heading1": "Tentang",
     "heading2": "Saya",
     "imageAlt": "Foto profil Rizqiansyah Ramadhan",
-    "paragraph1": "Mahasiswa Software Engineering yang sedang menempuh pendidikan di Global Institute Technology And Business dengan spesialisasi pengembangan backend. Saya memiliki pengalaman dalam membuat dan mengelola API menggunakan berbagai framework backend seperti Express, NestJS, Flask, dan Laravel.",
-    "paragraph2": "Terampil dalam manajemen database menggunakan MongoDB, MySQL, PostgreSQL, SQLite, dan Firebase. Memiliki pemahaman yang kuat tentang konsep dan alur kerja frontend untuk mengintegrasikan API secara efektif.",
+    "paragraph1": "Seorang mahasiswa Sarjana Teknik Perangkat Lunak di Global Institute Technology And Business yang berspesialisasi dalam pengembangan backend. Saya memiliki pengalaman dalam membangun dan mengelola API menggunakan berbagai kerangka kerja backend seperti Go (Golang), Express, NestJS, Flask, dan Laravel.",
+    "paragraph2": "Terampil dalam berbagai database seperti MongoDB, MySQL, PostgreSQL, SQLite, dan Firebase, dan memiliki pemahaman yang kuat tentang integrasi frontend. Saya juga familiar dengan pengembangan mobile menggunakan Flutter.",
     "additionalSkillsHeading": "Keterampilan Tambahan",
     "additionalSkills": [
       "Kolaborasi",
@@ -76,7 +76,10 @@
       "Manajemen Waktu"
     ],
     "languagesHeading": "Bahasa",
-    "languages": ["Indonesia (Native)", "Inggris (Intermediate)"],
+    "languages": [
+      "Indonesia (Native)",
+      "Inggris (Intermediate)"
+    ],
     "quote": "Selalu bersemangat untuk belajar dan berkontribusi pada proyek-proyek yang berdampak."
   },
   "projects": {
@@ -103,7 +106,7 @@
       "deployed": "Deployed",
       "notDeployed": "Belum Dideploy"
     },
-    "techStackHeading": "Tumpukan Teknologi",
+    "techStackHeading": "Teknologi yang digunakan",
     "noProjectsFound": "Tidak ada proyek dalam kategori ini.",
     "closeButton": "Tutup",
     "closeModalAriaLabel": "Tutup detail proyek",
@@ -113,11 +116,11 @@
     },
     "project1": {
       "name": "Project 1",
-      "description": "Proyek frontend dengan fokus pada UI/UX modern dan responsif."
+      "description": "Proyek frontend menggunakan html, css, javascript, dan bootstrap dengan fokus pada UI/UX modern dan responsif."
     },
     "webStaticUAS": {
-      "name": "Web Static UAS",
-      "description": "Website statis untuk keperluan tugas akhir semester dengan desain minimalis."
+      "name": "Web Static UAS Semester 1",
+      "description": "Website statis untuk keperluan tugas akhir semester 1 dengan desain minimalis."
     },
     "socialMediaApi": {
       "name": "Social Media API",
@@ -125,7 +128,7 @@
     },
     "magicScrollApi": {
       "name": "Magic Scroll API",
-      "description": "API untuk aplikasi membaca dengan fitur bookmark, highlights, dan rekomendasi konten."
+      "description": "API untuk aplikasi notes dengan fitur bookmark, highlights, dan manajemen notes."
     },
     "sistemInformasiKKN": {
       "name": "Sistem Informasi Pendaftaran KKN/KKP",
@@ -133,7 +136,7 @@
     },
     "happinessOverloadApiV1": {
       "name": "Happiness Overload API v1",
-      "description": "Backend API untuk aplikasi mood tracking dan jurnal kebahagiaan."
+      "description": "Backend API untuk aplikasi media sosial dengan fitur autentikasi, posting, dan interaksi antar pengguna. (social-media-api sama cuma beda repo)"
     },
     "happinessOverloadApiV2": {
       "name": "Happiness Overload API v2",
@@ -145,7 +148,7 @@
     },
     "bigFloppaApi": {
       "name": "Big Floppa API",
-      "description": "Fun API dengan kumpulan gambar dan fakta tentang kucing Big Floppa."
+      "description": "API untuk jual beli kucing dengan fitur yang lebih lengkap dari cat-marketplace"
     },
     "simpleFlutterTodo": {
       "name": "Simple Flutter Todo",
