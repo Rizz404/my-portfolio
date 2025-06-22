@@ -1,6 +1,87 @@
 import { useState } from "react";
 import { useLocalization } from "../../hooks/useLocalization";
 import { motion, AnimatePresence } from "framer-motion";
+import { useBreakpoint } from "../../hooks/useBreakpoint";
+
+const categoryStyles: Record<ProjectCategory, string> = {
+  all: "bg-secondary text-secondary",
+  frontend: "bg-primary text-text-primary",
+  backend: "bg-accent text-text-primary",
+  fullstack: "bg-bg-alt text-text-primary",
+  mobile: "bg-secondary text-text-primary",
+};
+
+const techIcons: Record<string, string> = {
+  PHP: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+  MySQL:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+  JavaScript:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+  HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+  CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+  React:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+  TailwindCSS:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  Express:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+  MongoDB:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+  JWT: "https://jwt.io/img/pic_logo.svg",
+  "Node.js":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+  PostgreSQL:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+  TypeScript:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+  Bootstrap:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
+  jQuery:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg",
+  NestJS:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg",
+  Prisma:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+  Redis:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
+  Flutter:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg",
+  Dart: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg",
+  Firebase:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
+  Flask:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg",
+  Python:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+  SQLAlchemy:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg",
+  SQLite:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg",
+  GetX: "https://raw.githubusercontent.com/jonataslaw/getx-community/master/get.png", // Contoh custom icon
+  Laravel:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+};
+
+const modalVariants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      damping: 25,
+      stiffness: 300,
+      when: "beforeChildren",
+      staggerChildren: 0.07,
+    },
+  },
+  exit: { opacity: 0, scale: 0.95 },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 interface ProjectsSectionProps {
   id: string;
@@ -17,6 +98,8 @@ type Project = {
   image: string;
   deployed: boolean;
   maintained: boolean;
+  repoUrl?: string; // URL ke repo GitHub
+  liveUrl?: string; // URL ke website/demo live
 };
 
 const ProjectsSection = ({ id }: ProjectsSectionProps) => {
@@ -25,6 +108,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [showAll, setShowAll] = useState(false);
+
+  const breakpoint = useBreakpoint();
 
   const projects: Project[] = [
     {
@@ -36,6 +121,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: false,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "project1",
@@ -46,6 +133,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "web-static-uas",
@@ -56,6 +145,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: false,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "social-media-api",
@@ -66,6 +157,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: false,
       maintained: false,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "magic-scroll-api",
@@ -76,6 +169,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: false,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "sistem-informasi-kkn",
@@ -86,6 +181,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "happiness-overload-api-v1",
@@ -96,6 +193,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: false,
       maintained: false,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "happiness-overload-api-v2",
@@ -106,6 +205,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "magic-scroll-api-v2",
@@ -116,6 +217,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "big-floppa-api",
@@ -126,6 +229,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: false,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "simple-flutter-todo",
@@ -136,6 +241,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: false,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "gun-api-with-flask",
@@ -146,6 +253,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: false,
       maintained: false,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "uas-mobile",
@@ -156,6 +265,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: false,
       maintained: false,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "e-book-api",
@@ -166,6 +277,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "tegar-workshop-server",
@@ -176,6 +289,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "rekomendasi-jurusan-laravel",
@@ -186,6 +301,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: false,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "car-paint-server",
@@ -196,6 +313,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: false,
       maintained: false,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
     {
       id: "project-3",
@@ -206,6 +325,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       image: "/assets/images/rekomendasi-jurusan.png",
       deployed: true,
       maintained: true,
+      repoUrl: "https://github.com/user/repo",
+      liveUrl: "https://project-live-url.com",
     },
   ];
 
@@ -221,10 +342,22 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     (project) => activeCategory === "all" || project.category === activeCategory
   );
 
-  // For mobile view, limit the number of projects shown initially
+  let initialLimit;
+  switch (breakpoint) {
+    case "xl":
+      initialLimit = 8;
+      break;
+    case "md":
+      initialLimit = 6;
+      break;
+    default: // sm
+      initialLimit = 2;
+      break;
+  }
+
   const displayedProjects = showAll
     ? filteredProjects
-    : filteredProjects.slice(0, 6);
+    : filteredProjects.slice(0, initialLimit);
 
   const openModal = (project: Project) => {
     setSelectedProject(project);
@@ -306,7 +439,11 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
                   loading="lazy"
                 />
                 <div className="absolute top-2 right-2">
-                  <span className="px-3 py-1 text-xs font-semibold rounded bg-opacity-80 text-text-inverted bg-secondary">
+                  <span
+                    className={`px-3 py-1 text-xs font-bold rounded ${
+                      categoryStyles[project.category]
+                    }`}
+                  >
                     {project.category}
                   </span>
                 </div>
@@ -320,19 +457,22 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
                 </p>
 
                 <div className="flex items-center justify-between mt-4">
-                  <div className="flex gap-1">
-                    {project.techStack.slice(0, 2).map((tech, idx) => (
-                      <span
-                        key={idx}
-                        className="px-2 py-1 text-xs rounded bg-bg-muted"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.techStack.length > 2 && (
-                      <span className="px-2 py-1 text-xs rounded bg-bg-muted">
-                        +{project.techStack.length - 2}
-                      </span>
+                  <div className="flex items-center gap-2">
+                    {project.techStack.slice(0, 4).map((tech) =>
+                      techIcons[tech] ? (
+                        <img
+                          key={tech}
+                          src={techIcons[tech]}
+                          alt={tech}
+                          title={tech} // Tooltip nama tech saat hover
+                          className="w-5 h-5"
+                        />
+                      ) : null
+                    )}
+                    {project.techStack.length > 4 && (
+                      <div className="flex items-center justify-center w-5 h-5 text-xs rounded-full bg-bg-muted text-text-muted">
+                        +{project.techStack.length - 4}
+                      </div>
                     )}
                   </div>
                   <span className="text-xs">
@@ -361,17 +501,15 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
         </div>
       )}
 
-      {filteredProjects.length > 6 && (
-        <div className="flex justify-center mt-8">
+      {filteredProjects.length > initialLimit && (
+        <div className="flex justify-center mt-6">
           <motion.button
-            className="px-6 py-2 text-sm font-medium rounded text-text-inverted bg-secondary hover:bg-secondary-hover"
+            className="px-4 py-2 text-sm font-medium rounded border border-secondary text-secondary transition-colors duration-200 hover:border-primary hover:text-primary"
             onClick={() => setShowAll(!showAll)}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            {showAll
-              ? t("projects.showLess") || "Show Less"
-              : t("projects.showMore") || "Show More"}
+            {showAll ? t("skills.showLess") : t("skills.showMore")}
           </motion.button>
         </div>
       )}
@@ -379,117 +517,139 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       <AnimatePresence>
         {modalOpen && selectedProject && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center px-4 py-10 overflow-y-auto backdrop-blur-md bg-bg-main bg-opacity-70"
+            className="fixed inset-0 z-50 flex items-center justify-center px-4 py-10 overflow-y-auto backdrop-blur-md bg-bg-main/80"
             onClick={closeModal}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
           >
             <motion.div
-              className="bg-bg-main rounded-md max-w-4xl w-full max-h-[90vh] overflow-y-auto relative shadow-xl"
+              className="bg-bg-alt rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl border border-bg-muted flex flex-col"
               onClick={(e) => e.stopPropagation()}
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: "spring", damping: 25 }}
+              variants={modalVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
             >
-              <motion.button
-                className="absolute text-xl top-4 right-4 text-text-primary hover:text-primary"
-                onClick={closeModal}
-                aria-label={t("projects.closeModalAriaLabel")}
-                whileHover={{ scale: 1.1, rotate: 90 }}
-                transition={{ duration: 0.2 }}
-              >
-                <i className="fas fa-times"></i>
-              </motion.button>
-
-              <div className="w-full h-64 overflow-hidden sm:h-80">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.name}
-                  className="object-cover w-full h-full"
-                />
+              <div className="sticky top-0 z-10 flex justify-end p-2 bg-bg-alt/80 backdrop-blur-sm">
+                <motion.button
+                  className="flex items-center justify-center w-8 h-8 rounded-full text-text-secondary hover:bg-bg-muted hover:text-primary"
+                  onClick={closeModal}
+                  aria-label={t("projects.closeModalAriaLabel")}
+                  whileHover={{ scale: 1.1, rotate: 90 }}
+                >
+                  <i className="fas fa-times"></i>
+                </motion.button>
               </div>
 
-              <div className="p-6">
-                <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                  <h3 className="text-2xl font-semibold">
-                    {selectedProject.name}
-                  </h3>
-                  <span className="px-3 py-1 text-xs font-medium rounded-full text-text-inverted bg-primary">
-                    {selectedProject.category}
-                  </span>
-                </div>
+              <div className="flex-grow p-6 pt-0 md:p-8 md:pt-0">
+                <div className="grid gap-8 md:grid-cols-2">
+                  {/* --- KOLOM KIRI: GAMBAR & TOMBOL AKSI --- */}
+                  <motion.div variants={itemVariants}>
+                    <div className="mb-4 overflow-hidden rounded-lg shadow-lg">
+                      <img
+                        src={selectedProject.image}
+                        alt={selectedProject.name}
+                        className="object-cover w-full h-auto"
+                      />
+                    </div>
+                    <div className="flex gap-4">
+                      {selectedProject.liveUrl && (
+                        <a
+                          href={selectedProject.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 text-center btn btn-primary"
+                        >
+                          Live Demo{" "}
+                          <i className="ml-2 fas fa-external-link-alt"></i>
+                        </a>
+                      )}
+                      {selectedProject.repoUrl && (
+                        <a
+                          href={selectedProject.repoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 text-center btn btn-secondary"
+                        >
+                          Source Code <i className="ml-2 fab fa-github"></i>
+                        </a>
+                      )}
+                    </div>
+                  </motion.div>
 
-                <p className="mb-6 text-text-secondary">
-                  {selectedProject.description}
-                </p>
+                  {/* --- KOLOM KANAN: DETAIL PROYEK --- */}
+                  <motion.div variants={itemVariants}>
+                    <span
+                      className={`px-3 py-1 mb-3 inline-block text-sm font-bold rounded-full ${
+                        categoryStyles[selectedProject.category]
+                      }`}
+                    >
+                      {selectedProject.category}
+                    </span>
+                    <h3 className="mb-3 text-3xl font-bold text-text-primary">
+                      {selectedProject.name}
+                    </h3>
+                    <p className="mb-6 leading-relaxed text-text-secondary">
+                      {selectedProject.description}
+                    </p>
 
-                <div className="mb-6">
-                  <h4 className="mb-3 text-lg font-medium text-primary">
-                    {t("projects.techStackHeading")}
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedProject.techStack.map((tech, idx) => (
-                      <motion.span
-                        key={idx}
-                        className="px-3 py-1 text-sm rounded bg-bg-element"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{
-                          opacity: 1,
-                          y: 0,
-                          transition: { delay: idx * 0.05 },
-                        }}
-                        whileHover={{ y: -2 }}
-                      >
-                        {tech}
-                      </motion.span>
-                    ))}
-                  </div>
-                </div>
+                    <h4 className="mb-3 text-lg font-semibold text-text-primary">
+                      {t("projects.techStackHeading")}
+                    </h4>
+                    <div className="flex flex-wrap gap-3 mb-6">
+                      {selectedProject.techStack.map((tech) => (
+                        <div
+                          key={tech}
+                          className="flex items-center gap-2 px-3 py-1 rounded-md bg-bg-element"
+                        >
+                          <img
+                            src={techIcons[tech]}
+                            alt={tech}
+                            className="w-5 h-5"
+                          />
+                          <span className="text-sm font-medium">{tech}</span>
+                        </div>
+                      ))}
+                    </div>
 
-                <div className="flex flex-wrap gap-6 text-sm">
-                  <div>
-                    <span className="font-medium">
-                      {t("projects.status.label")}:
-                    </span>{" "}
-                    {selectedProject.maintained ? (
-                      <span className="text-primary">
-                        {t("projects.status.maintained")}
-                      </span>
-                    ) : (
-                      <span className="text-accent">
-                        {t("projects.status.archived")}
-                      </span>
-                    )}
-                  </div>
-
-                  <div>
-                    <span className="font-medium">
-                      {t("projects.deployment.label")}:
-                    </span>{" "}
-                    {selectedProject.deployed ? (
-                      <span className="text-primary">
-                        {t("projects.deployment.deployed")}
-                      </span>
-                    ) : (
-                      <span className="text-text-tertiary">
-                        {t("projects.deployment.notDeployed")}
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                <div className="flex justify-end mt-8">
-                  <motion.button
-                    className="px-6 py-2 transition-colors rounded text-text-inverted bg-primary hover:bg-primary-hover"
-                    onClick={closeModal}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {t("projects.closeButton")}
-                  </motion.button>
+                    <div className="p-4 rounded-md bg-bg-element">
+                      <div className="flex justify-between">
+                        <div>
+                          <span className="block text-sm font-medium text-text-muted">
+                            {t("projects.status.label")}
+                          </span>
+                          <span
+                            className={`font-semibold ${
+                              selectedProject.maintained
+                                ? "text-primary"
+                                : "text-accent"
+                            }`}
+                          >
+                            {selectedProject.maintained
+                              ? t("projects.status.maintained")
+                              : t("projects.status.archived")}
+                          </span>
+                        </div>
+                        <div>
+                          <span className="block text-sm font-medium text-text-muted">
+                            {t("projects.deployment.label")}
+                          </span>
+                          <span
+                            className={`font-semibold ${
+                              selectedProject.deployed
+                                ? "text-primary"
+                                : "text-text-tertiary"
+                            }`}
+                          >
+                            {selectedProject.deployed
+                              ? t("projects.deployment.deployed")
+                              : t("projects.deployment.notDeployed")}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
                 </div>
               </div>
             </motion.div>
