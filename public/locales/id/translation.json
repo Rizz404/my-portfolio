@@ -21,26 +21,23 @@
   "hero": {
     "greeting": "Halo, saya",
     "name": "Rizqiansyah Ramadhan.",
-    "role": "Backend",
+    "role": "Software",
     "developer": "Developer",
     "location": "Berbasis di",
     "city": "Tangerang, Banten.",
     "bio": "Mahasiswa Sarjana Teknik Perangkat Lunak dengan spesialisasi dalam pengembangan backend, berpengalaman dalam membangun dan mengelola API. Mahir dengan beragam tumpukan teknologi termasuk Go (Golang), Express, NestJS, Flask, dan Laravel. Terampil dalam berbagai database seperti MongoDB, MySQL, PostgreSQL, SQLite, dan Firebase, serta memiliki pemahaman yang kuat tentang integrasi frontend.",
-    "emailAriaLabel": "Email",
-    "githubAriaLabel": "GitHub",
-    "linkedinAriaLabel": "LinkedIn",
-    "facebookAriaLabel": "Facebook",
-    "instagramAriaLabel": "Instagram",
     "imageAlt": "Ilustrasi seorang backend developer dengan kode atau server"
   },
   "skills": {
     "heading": "Keahlian",
     "heading2": "Saya",
     "categories": {
-      "all": "all",
-      "backend": "backend",
-      "database": "database",
-      "tools": "tools"
+      "all": "Semua",
+      "language": "Bahasa Pemrograman",
+      "framework": "Framework",
+      "database": "Database",
+      "tools": "Tools",
+      "addition": "Tambahan"
     },
     "showMore": "Lihat Lebih Banyak",
     "showLess": "Lihat Lebih Sedikit"
@@ -76,10 +73,7 @@
       "Manajemen Waktu"
     ],
     "languagesHeading": "Bahasa",
-    "languages": [
-      "Indonesia (Native)",
-      "Inggris (Intermediate)"
-    ],
+    "languages": ["Indonesia (Native)", "Inggris (Intermediate)"],
     "quote": "Selalu bersemangat untuk belajar dan berkontribusi pada proyek-proyek yang berdampak."
   },
   "projects": {

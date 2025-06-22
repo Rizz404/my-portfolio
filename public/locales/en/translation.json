@@ -21,26 +21,23 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Rizqiansyah Ramadhan.",
-    "role": "Backend",
+    "role": "Software",
     "developer": "Developer",
     "location": "Based In",
     "city": "Tangerang, Banten.",
     "bio": "An undergraduate Software Engineering student specializing in backend development, with experience in building and managing APIs. Proficient with a diverse tech stack including Go (Golang), Express, NestJS, Flask, and Laravel. Skilled in various databases and familiar with mobile development using Flutter. Eager to learn and contribute to impactful projects.",
-    "emailAriaLabel": "Email",
-    "githubAriaLabel": "GitHub",
-    "linkedinAriaLabel": "LinkedIn",
-    "facebookAriaLabel": "Facebook",
-    "instagramAriaLabel": "Instagram",
     "imageAlt": "Illustration of a backend developer with code or servers"
   },
   "skills": {
     "heading": "My",
     "heading2": "Skills",
     "categories": {
-      "all": "all",
-      "backend": "backend",
-      "database": "database",
-      "tools": "tools"
+      "all": "All",
+      "language": "Programming Languages",
+      "framework": "Frameworks",
+      "database": "Databases",
+      "tools": "Tools",
+      "addition": "Additions"
     },
     "showMore": "Show More",
     "showLess": "Show Less"
@@ -76,10 +73,7 @@
       "Time Management"
     ],
     "languagesHeading": "Languages",
-    "languages": [
-      "Indonesian (Native)",
-      "English (Intermediate)"
-    ],
+    "languages": ["Indonesian (Native)", "English (Intermediate)"],
     "quote": "Eager to learn and contribute to impactful projects. "
   },
   "projects": {

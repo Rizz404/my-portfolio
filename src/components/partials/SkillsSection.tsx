@@ -6,55 +6,155 @@ interface SkillsSectionProps {
   id: string;
 }
 
-type Skill = { name: string; icon: string };
+type Skill = { name: string; picture: string };
 type SkillsByCategory = {
   all: Skill[];
-  backend: Skill[];
+  language: Skill[];
+  framework: Skill[];
   database: Skill[];
   tools: Skill[];
+  addition: Skill[];
 };
 
 const SkillsSection = ({ id }: SkillsSectionProps) => {
-  type Category = "all" | "backend" | "database" | "tools";
+  type Category =
+    | "all"
+    | "language"
+    | "framework"
+    | "database"
+    | "tools"
+    | "addition";
   const [activeCategory, setActiveCategory] = useState<Category>("all");
   const [showAll, setShowAll] = useState(false);
   const { t } = useLocalization();
 
+  // Todo: Bakal ditambahin Language, Framework, Database, Tools, Addition
   const skills: SkillsByCategory = {
     all: [],
-    backend: [
-      { name: "Express", icon: "fas fa-server" },
-      { name: "NestJS", icon: "fas fa-cogs" },
-      { name: "Flask", icon: "fas fa-flask" },
-      { name: "Laravel", icon: "fab fa-laravel" },
-      { name: "TypeScript", icon: "fab fa-js" },
-      { name: "JWT", icon: "fas fa-key" },
+    language: [
+      {
+        name: "Javascript",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      },
+      {
+        name: "TypeScript",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "Go (golang)",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
+      },
+      {
+        name: "Dart",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg",
+      },
+      {
+        name: "PHP",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+      },
+    ],
+    framework: [
+      {
+        name: "Express",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      },
+      {
+        name: "Laravel",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+      },
+      {
+        name: "NestJS",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg",
+      },
+      {
+        name: "Flask",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+      },
     ],
     database: [
-      { name: "MongoDB", icon: "fas fa-database" },
-      { name: "Prisma", icon: "fas fa-layer-group" },
-      { name: "PostgreSQL", icon: "fas fa-database" },
-      { name: "MySQL", icon: "fas fa-database" },
-      { name: "Firebase", icon: "fas fa-fire" },
-      { name: "SQLAlchemy", icon: "fas fa-flask" },
-      { name: "SQLite", icon: "fas fa-database" },
+      {
+        name: "PostgreSQL",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+      },
+      {
+        name: "MySQL",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      },
+      {
+        name: "Firebase",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+      },
+      {
+        name: "SQLite",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
+      },
+      {
+        name: "MongoDB",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      },
     ],
     tools: [
-      { name: "Git", icon: "fab fa-git-alt" },
-      { name: "GitHub", icon: "fab fa-github" },
-      { name: "Postman", icon: "fas fa-paper-plane" },
-      { name: "Docker", icon: "fab fa-docker" },
-      { name: "VS Code", icon: "fas fa-code" },
+      {
+        name: "Git",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      },
+      {
+        name: "GitHub",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      },
+      {
+        name: "Postman",
+        picture:
+          "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+      },
+      {
+        name: "Docker",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      },
+      {
+        name: "VS Code",
+        picture:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+      },
     ],
+    addition: [{ name: "JWT", picture: "https://jwt.io/img/pic_logo.svg" }],
   };
 
-  skills.all = [...skills.backend, ...skills.database, ...skills.tools];
+  skills.all = [
+    ...skills.language,
+    ...skills.framework,
+    ...skills.database,
+    ...skills.tools,
+    ...skills.addition,
+  ];
 
   const categories = [
-    { id: "all", name: t("skills.categories.all") || "All Skills" },
-    { id: "backend", name: t("skills.categories.backend") || "Backend & API" },
-    { id: "database", name: t("skills.categories.database") || "Database" },
-    { id: "tools", name: t("skills.categories.tools") || "Tools" },
+    { id: "all", name: t("skills.categories.all") },
+    { id: "language", name: t("skills.categories.language") },
+    {
+      id: "framework",
+      name: t("skills.categories.framework"),
+    },
+    { id: "database", name: t("skills.categories.database") },
+    { id: "tools", name: t("skills.categories.tools") },
+    { id: "addition", name: t("skills.categories.addition") },
   ];
 
   const displayedSkills = showAll
@@ -117,7 +217,11 @@ const SkillsSection = ({ id }: SkillsSectionProps) => {
                 }}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
-                <i className={`${skill.icon} text-2xl mb-2 text-primary`}></i>
+                <img
+                  src={skill.picture}
+                  alt={`${skill.name} logo`}
+                  className="w-10 h-10 mb-2"
+                />
                 <span className="text-xs font-semibold text-center">
                   {skill.name}
                 </span>
@@ -128,16 +232,14 @@ const SkillsSection = ({ id }: SkillsSectionProps) => {
       </div>
 
       {skills[activeCategory].length > 6 && (
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center mt-6">
           <motion.button
-            className="px-4 py-2 text-sm font-medium rounded text-text-inverted bg-secondary hover:bg-secondary-hover"
+            className="px-4 py-2 text-sm font-medium rounded border border-secondary text-secondary transition-colors duration-200 hover:border-primary hover:text-primary"
             onClick={() => setShowAll(!showAll)}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            {showAll
-              ? t("skills.showLess") || "Show Less"
-              : t("skills.showMore") || "Show More"}
+            {showAll ? t("skills.showLess") : t("skills.showMore")}
           </motion.button>
         </div>
       )}
