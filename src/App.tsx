@@ -7,6 +7,7 @@ import HeroSection from "./components/partials/HeroSection";
 import ProjectsSection from "./components/partials/ProjectsSection";
 import SkillsSection from "./components/partials/SkillsSection";
 import AppWrapper from "./components/ui/AppWrapper";
+import ScrollToTopButton from "./components/ui/ScrollTopButton";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <ContactSection id="contact" />
       </main>
       <Footer />
+      <ScrollToTopButton />
     </AppWrapper>
   );
 };
