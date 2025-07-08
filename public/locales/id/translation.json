@@ -1,81 +1,4 @@
 {
-  "navigation": {
-    "home": "Beranda",
-    "skills": "Keahlian",
-    "aboutMe": "Tentang Saya",
-    "experience": "Pengalaman",
-    "projects": "Proyek",
-    "contact": "Kontak"
-  },
-  "language": {
-    "en": "Inggris",
-    "id": "Indonesia"
-  },
-  "theme": {
-    "darkMode": "Mode Gelap",
-    "lightMode": "Mode Terang"
-  },
-  "actions": {
-    "downloadCV": "Unduh CV"
-  },
-  "hero": {
-    "greeting": "Halo, saya",
-    "name": "Rizqiansyah Ramadhan.",
-    "role": "Software",
-    "developer": "Developer",
-    "location": "Berbasis di",
-    "city": "Tangerang, Banten.",
-    "bio": "Mahasiswa Sarjana Teknik Perangkat Lunak dengan spesialisasi dalam pengembangan backend, berpengalaman dalam membangun dan mengelola API. Mahir dengan beragam tumpukan teknologi termasuk Go (Golang), Express, NestJS, Flask, dan Laravel. Terampil dalam berbagai database seperti MongoDB, MySQL, PostgreSQL, SQLite, dan Firebase, serta memiliki pemahaman yang kuat tentang integrasi frontend.",
-    "imageAlt": "Ilustrasi seorang backend developer dengan kode atau server"
-  },
-  "skills": {
-    "heading": "Keahlian",
-    "heading2": "Saya",
-    "categories": {
-      "all": "Semua",
-      "language": "Bahasa Pemrograman",
-      "framework": "Framework",
-      "database": "Database",
-      "tools": "Tools",
-      "addition": "Tambahan"
-    },
-    "showMore": "Lihat Lebih Banyak",
-    "showLess": "Lihat Lebih Sedikit"
-  },
-  "experience": {
-    "heading1": "Pengalaman",
-    "currentFocus": "Saat ini fokus untuk mendapatkan pengalaman dan menyelesaikan pendidikan saya di",
-    "universityName": "Global Institute Technology And Business",
-    "universityPeriod": "(2022-2025).",
-    "sanken": {
-      "position": "Internship - Quality Control",
-      "period": "2023 - 2024",
-      "description1": "Melakukan pengecekan kualitas pada unit refrigerator untuk memastikan kesesuaian dengan standar perusahaan.",
-      "description2": "Berkolaborasi dengan tim produksi untuk mengidentifikasi dan menyelesaikan cacat selama proses manufaktur."
-    },
-    "visionet": {
-      "position": "One Day Experience as IT Team",
-      "period": "Oktober 2023",
-      "description1": "Mengikuti pelatihan singkat sebagai bagian dari tim IT untuk pengalaman praktis."
-    }
-  },
-  "aboutMe": {
-    "heading1": "Tentang",
-    "heading2": "Saya",
-    "imageAlt": "Foto profil Rizqiansyah Ramadhan",
-    "paragraph1": "Seorang mahasiswa Sarjana Teknik Perangkat Lunak di Global Institute Technology And Business yang berspesialisasi dalam pengembangan backend. Saya memiliki pengalaman dalam membangun dan mengelola API menggunakan berbagai kerangka kerja backend seperti Go (Golang), Express, NestJS, Flask, dan Laravel.",
-    "paragraph2": "Terampil dalam berbagai database seperti MongoDB, MySQL, PostgreSQL, SQLite, dan Firebase, dan memiliki pemahaman yang kuat tentang integrasi frontend. Saya juga familiar dengan pengembangan mobile menggunakan Flutter.",
-    "additionalSkillsHeading": "Keterampilan Tambahan",
-    "additionalSkills": [
-      "Kolaborasi",
-      "Komunikasi",
-      "Pemecahan Masalah",
-      "Manajemen Waktu"
-    ],
-    "languagesHeading": "Bahasa",
-    "languages": ["Indonesia (Native)", "Inggris (Intermediate)"],
-    "quote": "Digerakkan oleh rasa ingin tahu tentang bagaimana teknologi terhubung untuk menciptakan produk hebat. Saya bersemangat untuk berkembang dan menyumbangkan keahlian saya dalam sebuah tim yang kolaboratif."
-  },
   "projects": {
     "heading1": "Proyek",
     "heading2": "Saya",
@@ -104,97 +27,69 @@
     "noProjectsFound": "Tidak ada proyek dalam kategori ini.",
     "closeButton": "Tutup",
     "closeModalAriaLabel": "Tutup detail proyek",
+    "portfolio": {
+      "name": "My Portfolio",
+      "description": "Sebuah situs web portofolio pribadi yang dinamis dan responsif, dibangun menggunakan React.js untuk antarmuka pengguna yang interaktif. Dilengkapi dengan fungsionalitas multibahasa menggunakan i18next untuk menjangkau audiens yang lebih luas, serta desain yang modern untuk menampilkan proyek dan keahlian secara efektif."
+    },
     "catMarketplace": {
       "name": "Cat Marketplace with Native PHP",
-      "description": "Platform e-commerce untuk jual beli kucing dengan berbagai fitur seperti filter, pencarian, dan sistem keranjang belanja."
-    },
-    "project1": {
-      "name": "Project 1",
-      "description": "Proyek frontend menggunakan html, css, javascript, dan bootstrap dengan fokus pada UI/UX modern dan responsif."
-    },
-    "webStaticUAS": {
-      "name": "Web Static UAS Semester 1",
-      "description": "Website statis untuk keperluan tugas akhir semester 1 dengan desain minimalis."
+      "description": "Sebuah platform e-commerce yang dikembangkan menggunakan PHP native, didedikasikan untuk komunitas pecinta kucing. Aplikasi ini memungkinkan pengguna untuk menjual dan membeli kucing ras dengan aman, dilengkapi fitur-fitur esensial seperti pencarian canggih, filter berdasarkan ras atau lokasi, dan sistem keranjang belanja yang intuitif."
     },
     "socialMediaApi": {
       "name": "Social Media API",
-      "description": "Backend API untuk aplikasi media sosial dengan fitur autentikasi, posting, dan interaksi antar pengguna."
+      "description": "Sebuah RESTful API yang menjadi tulang punggung aplikasi media sosial. Dibangun untuk mengelola data pengguna, autentikasi aman menggunakan token, pembuatan dan pengelolaan postingan, serta fitur interaksi sosial seperti suka dan komentar."
     },
     "magicScrollApi": {
       "name": "Magic Scroll API",
-      "description": "API untuk aplikasi notes dengan fitur bookmark, highlights, dan manajemen notes."
+      "description": "Backend API yang dirancang khusus untuk aplikasi pencatatan digital. API ini menyediakan endpoint untuk membuat, membaca, memperbarui, dan menghapus catatan, dilengkapi dengan fungsionalitas lanjutan seperti bookmark dan highlight teks."
     },
     "sistemInformasiKKN": {
       "name": "Sistem Informasi Pendaftaran KKN/KKP",
-      "description": "Aplikasi untuk memfasilitasi pendaftaran dan manajemen KKN/KKP mahasiswa."
+      "description": "Sistem informasi berbasis web yang bertujuan untuk mendigitalisasi dan menyederhanakan proses pendaftaran serta manajemen program Kuliah Kerja Nyata (KKN/KKP). Aplikasi ini memfasilitasi alur kerja mulai dari pendaftaran hingga pelaporan kegiatan."
     },
     "happinessOverloadApiV1": {
       "name": "Happiness Overload API v1",
-      "description": "Backend API untuk aplikasi media sosial dengan fitur autentikasi, posting, dan interaksi antar pengguna. (social-media-api sama cuma beda repo)"
+      "description": "Versi awal dari API media sosial yang dirancang untuk menangani operasi inti seperti registrasi pengguna, login, dan kemampuan untuk membuat serta berinteraksi dengan postingan. Proyek ini menjadi fondasi untuk pengembangan fitur yang lebih kompleks di masa depan."
     },
     "happinessOverloadApiV2": {
       "name": "Happiness Overload API v2",
-      "description": "Versi yang ditingkatkan dari Happiness Overload API dengan fitur tambahan dan performa yang lebih baik."
+      "description": "Iterasi kedua dari Happiness Overload API, menghadirkan peningkatan signifikan dalam performa dan skalabilitas. Versi ini memperkenalkan arsitektur yang lebih matang, optimisasi query database, dan penambahan fitur baru seperti sistem notifikasi dan feed yang dipersonalisasi."
     },
     "magicScrollApiV2": {
       "name": "Magic Scroll API v2",
-      "description": "Versi terbaru dari Magic Scroll API dengan arsitektur yang lebih baik dan fitur tambahan."
+      "description": "Penyempurnaan dari Magic Scroll API dengan restrukturisasi arsitektur untuk meningkatkan modularitas dan kemudahan pemeliharaan. Versi ini menambahkan fitur kolaborasi real-time pada catatan dan sinkronisasi antar perangkat."
     },
-    "bigFloppaApi": {
-      "name": "Big Floppa API",
-      "description": "API untuk jual beli kucing dengan fitur yang lebih lengkap dari cat-marketplace"
+    "catShopApiWithExpress": {
+      "name": "Cat Shop Api With Express",
+      "description": "Sebuah API backend yang dibangun menggunakan Express.js untuk mendukung aplikasi e-commerce khusus penjualan kucing. API ini menawarkan fungsionalitas yang lebih kaya, termasuk manajemen inventaris, sistem ulasan dan rating produk, serta riwayat transaksi pengguna."
     },
     "simpleFlutterTodo": {
       "name": "Simple Flutter Todo",
-      "description": "Aplikasi todo list sederhana dibuat dengan Flutter untuk Android dan iOS."
+      "description": "Aplikasi mobile lintas platform yang fungsional untuk mengelola daftar tugas harian. Dibangun dengan Flutter, aplikasi ini menawarkan antarmuka yang bersih dan intuitif untuk menambah, menandai selesai, dan menghapus tugas di Android maupun iOS."
     },
     "gunApiWithFlask": {
       "name": "Gun API with Flask",
-      "description": "API untuk katalog dan informasi tentang senjata api menggunakan Flask."
+      "description": "RESTful API yang dikembangkan dengan framework Flask dari Python, berfungsi sebagai basis data dan penyedia informasi mendetail tentang berbagai jenis senjata api. API ini menyediakan endpoint untuk mengakses data spesifikasi, sejarah, dan gambar."
     },
     "uasMobile": {
-      "name": "UAS Mobile",
-      "description": "Aplikasi mobile yang dibuat untuk tugas akhir semester dengan fokus pada UI/UX."
+      "name": "UAS Mobile (GO Book)",
+      "description": "GoBook adalah aplikasi pengelolaan dan eksplorasi buku yang dirancang untuk membantu pengguna menemukan, menyimpan, dan mengelola buku favorit mereka dengan mudah."
     },
     "eBookApi": {
       "name": "E-Book API with Standardized API",
-      "description": "API untuk aplikasi e-book dengan standar REST API yang konsisten."
-    },
-    "tegarWorkshopServer": {
-      "name": "Tegar Workshop Server",
-      "description": "Backend untuk aplikasi manajemen bengkel dengan fitur inventaris dan pelacakan servis."
+      "description": "Backend API yang dirancang mengikuti praktik terbaik dan standardisasi RESTful untuk aplikasi pembaca e-book. API ini mengelola koleksi buku digital, data pengguna, progres membaca, dan catatan dengan desain endpoint yang konsisten."
     },
     "rekomendasiJurusanLaravel": {
       "name": "Rekomendasi Jurusan Laravel",
-      "description": "Aplikasi untuk membantu calon mahasiswa memilih jurusan berdasarkan minat dan kemampuan."
+      "description": "Aplikasi web yang dibangun menggunakan Laravel dan berfungsi sebagai Sistem Pendukung Keputusan (SPK) untuk memberikan rekomendasi jurusan kuliah. Sistem ini mengimplementasikan metode Simple Additive Weighting (SAW) untuk mengolah dan menganalisis nilai akademik siswa, kemudian menghasilkan peringkat jurusan yang paling sesuai berdasarkan kriteria yang telah ditentukan."
     },
     "carPaintServer": {
       "name": "Car Paint Server",
-      "description": "Backend untuk aplikasi katalog warna dan jenis cat mobil."
+      "description": "Sebuah server backend yang didedikasikan untuk aplikasi katalog cat mobil. Server ini menyediakan data terstruktur mengenai berbagai macam merek, jenis, dan kode warna cat, memungkinkan aplikasi klien menampilkan informasi produk secara akurat."
     },
     "project3": {
       "name": "Project 3",
-      "description": "Aplikasi mobile dengan fitur interaktif dan animasi modern."
+      "description": "Aplikasi Point of Sale (POS) berbasis mobile yang dibuat untuk memudahkan proses pemesanan dan manajemen di warung Bakso Pentol. Aplikasi ini dikembangkan sebagai solusi digital untuk admin/kasir, dengan fokus pada pengelolaan produk, pesanan, dan transaksi secara efisien."
     }
-  },
-  "contact": {
-    "heading1": "Hubungi",
-    "heading2": "Saya",
-    "name": "Rizqiansyah Ramadhan",
-    "emailLabel": "Email",
-    "email": "thenoblerizz@gmail.com",
-    "phoneLabel": "Telepon",
-    "phone": "+62 7778206856",
-    "locationLabel": "Lokasi",
-    "location": "Tangerang, Banten",
-    "connectHeading": "Terhubung Dengan Saya",
-    "connectDescription": "Jangan ragu untuk menghubungi jika Anda mencari pengembang backend atau ingin mendiskusikan sebuah proyek.",
-    "githubAriaLabel": "Profil GitHub",
-    "linkedinAriaLabel": "Profil LinkedIn",
-    "facebookAriaLabel": "Profil Facebook",
-    "instagramAriaLabel": "Profil Instagram"
-  },
-  "footer": {
-    "signature": "Didesain dan di maintain oleh Rizqiansyah"
   }
 }

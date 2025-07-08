@@ -100,81 +100,73 @@
       "deployed": "Deployed",
       "notDeployed": "Not Deployed"
     },
-    "techStackHeading": "Tech Stack",
+    "techStackHeading": "Technologies Used",
     "noProjectsFound": "No projects found in this category.",
     "closeButton": "Close",
     "closeModalAriaLabel": "Close project details",
+    "portfolio": {
+      "name": "My Portfolio",
+      "description": "A dynamic and responsive personal portfolio website built with React.js for an interactive user interface. It features multilingual functionality using i18next to reach a broader audience, along with a modern design to effectively showcase projects and skills."
+    },
     "catMarketplace": {
       "name": "Cat Marketplace with Native PHP",
-      "description": "An e-commerce platform for buying and selling cats with features like filtering, searching, and a shopping cart system."
-    },
-    "project1": {
-      "name": "Project 1",
-      "description": "A frontend project focused on modern and responsive UI/UX."
-    },
-    "webStaticUAS": {
-      "name": "Web Static UAS",
-      "description": "A static website for a final semester assignment with a minimalist design."
+      "description": "An e-commerce platform developed with native PHP, dedicated to the cat lover community. This application allows users to safely buy and sell purebred cats, equipped with essential features like advanced search, filtering by breed or location, and an intuitive shopping cart system."
     },
     "socialMediaApi": {
       "name": "Social Media API",
-      "description": "Backend API for a social media application with authentication, posting, and user interaction features."
+      "description": "A RESTful API that serves as the backbone for a social media application. Built to manage user data, secure token-based authentication, post creation and management, and social interaction features like likes and comments."
     },
     "magicScrollApi": {
       "name": "Magic Scroll API",
-      "description": "An API for a reading application with bookmark, highlight, and content recommendation features."
+      "description": "A backend API designed specifically for a digital note-taking application. This API provides endpoints to create, read, update, and delete notes, equipped with advanced functionalities like bookmarks and text highlighting."
     },
     "sistemInformasiKKN": {
-      "name": "KKN/KKP Registration Information System",
-      "description": "An application to facilitate student KKN/KKP registration and management."
+      "name": "Community Service Program Information System",
+      "description": "A web-based information system aimed at digitizing and simplifying the registration and management process for a Student Community Service program (KKN/KKP). This application facilitates the workflow from student registration to activity reporting."
     },
     "happinessOverloadApiV1": {
       "name": "Happiness Overload API v1",
-      "description": "Backend API for a mood tracking and happiness journal application."
+      "description": "The initial version of a social media API designed to handle core operations such as user registration, login, and the ability to create and interact with posts. This project serves as the foundation for developing more complex features in the future."
     },
     "happinessOverloadApiV2": {
       "name": "Happiness Overload API v2",
-      "description": "An improved version of the Happiness Overload API with additional features and better performance."
+      "description": "The second iteration of the Happiness Overload API, delivering significant improvements in performance and scalability. This version introduces a more mature architecture, database query optimization, and new features like a notification system and a personalized feed."
     },
     "magicScrollApiV2": {
       "name": "Magic Scroll API v2",
-      "description": "The latest version of the Magic Scroll API with improved architecture and additional features."
+      "description": "An enhancement of the Magic Scroll API with a restructured architecture to improve modularity and maintainability. This version adds real-time collaboration on notes and cross-device synchronization."
     },
-    "bigFloppaApi": {
-      "name": "Big Floppa API",
-      "description": "A fun API with a collection of images and facts about Big Floppa cats."
+    "catShopApiWithExpress": {
+      "name": "Cat Shop Api With Express",
+      "description": "A backend API built with Express.js to support a specialized e-commerce application for selling cats. This API offers richer functionality, including inventory management, a product review and rating system, and user transaction history."
     },
     "simpleFlutterTodo": {
       "name": "Simple Flutter Todo",
-      "description": "A simple todo list application built with Flutter for Android and iOS."
+      "description": "A functional cross-platform mobile application for managing daily to-do lists. Built with Flutter, this app offers a clean and intuitive interface to add, complete, and delete tasks on both Android and iOS."
     },
     "gunApiWithFlask": {
       "name": "Gun API with Flask",
-      "description": "An API for a firearms catalog and information using Flask."
+      "description": "A RESTful API developed with Python's Flask framework, serving as a database and provider of detailed information about various types of firearms. The API provides endpoints to access specification data, history, and images."
     },
     "uasMobile": {
-      "name": "UAS Mobile",
-      "description": "A mobile application built for a final semester assignment with a focus on UI/UX."
+      "name": "UAS Mobile (GO Book)",
+      "description": "GoBook is a book management and exploration application designed to help users easily discover, save, and manage their favorite books."
     },
     "eBookApi": {
       "name": "E-Book API with Standardized API",
-      "description": "An API for an e-book application with consistent REST API standards."
-    },
-    "tegarWorkshopServer": {
-      "name": "Tegar Workshop Server",
-      "description": "Backend for a workshop management application with inventory and service tracking features."
+      "description": "A backend API designed following best practices and RESTful standards for an e-book reader application. This API manages digital book collections, user data, reading progress, and notes with a consistent endpoint design."
     },
     "rekomendasiJurusanLaravel": {
-      "name": "Rekomendasi Jurusan Laravel",
-      "description": "An application to help prospective students choose a major based on interests and abilities."
+      "name": "Major Recommendation with Laravel",
+      "description": "A web application built with Laravel that functions as a Decision Support System (DSS) to provide university major recommendations. This system implements the Simple Additive Weighting (SAW) method to process and analyze student academic scores, then generates a ranking of the most suitable majors based on predetermined criteria."
     },
     "carPaintServer": {
       "name": "Car Paint Server",
-      "description": "Backend for a car paint color and type catalog application."
+      "description": "A backend server dedicated to a car paint catalog application. This server provides structured data on various brands, types, and color codes of paint, enabling client applications to display product information accurately."
     },
     "project3": {
       "name": "Project 3",
-      "description": "A mobile application with interactive features and modern animations."
+      "description": "A mobile-based Point of Sale (POS) application created to simplify the ordering and management process at a 'Bakso Pentol' stall. This application was developed as a digital solution for admins/cashiers, focusing on efficient management of products, orders, and transactions."
     }
   },
   "contact": {
