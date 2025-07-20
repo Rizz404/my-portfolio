@@ -5,6 +5,7 @@ import type { Language } from "../../context/localizationContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const { isDarkMode, toggleDarkMode } = useTheme();
   const { t, language, setLanguage } = useLocalization();
 
@@ -16,6 +17,14 @@ const Header = () => {
     { href: "#projects", title: t("navigation.projects") },
     { href: "#contact", title: t("navigation.contact") },
   ];
+
+  const languages = [
+    { code: "en", name: t("language.en"), flag: "🇺🇸" },
+    { code: "id", name: t("language.id"), flag: "🇮🇩" },
+    { code: "ja", name: t("language.ja"), flag: "🇯🇵" },
+  ];
+
+  const currentLanguage = languages.find((lang) => lang.code === language);
 
   const handleNavLinkClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -36,7 +45,14 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
-  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleLanguageChange = (newLanguage: Language) => {
+    setLanguage(newLanguage);
+    setIsLanguageDropdownOpen(false);
+  };
+
+  const handleLanguageSelectChange = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
     const newLanguage = e.target.value as Language;
     setLanguage(newLanguage);
   };
@@ -62,15 +78,53 @@ const Header = () => {
         </nav>
 
         <div className="items-center hidden space-x-4 md:flex">
-          <select
-            value={language}
-            onChange={handleLanguageChange}
-            className="px-2 py-1 text-sm border rounded bg-bg-alt text-text-primary border-secondary font-body focus:outline-none focus:ring-1 focus:ring-primary"
-          >
-            <option value="en">En</option>
-            <option value="id">Id</option>
-            <option value="ja">Ja</option>
-          </select>
+          {/* Custom Language Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
+              className="flex items-center space-x-2 px-3 py-2 text-sm border rounded-lg bg-bg-alt text-text-primary border-secondary font-body hover:border-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
+            >
+              <span className="text-lg">{currentLanguage?.flag}</span>
+              <span className="font-medium">{currentLanguage?.name}</span>
+              <i
+                className={`fas fa-chevron-down text-xs transition-transform duration-200 ${
+                  isLanguageDropdownOpen ? "rotate-180" : ""
+                }`}
+              ></i>
+            </button>
+
+            {isLanguageDropdownOpen && (
+              <>
+                {/* Overlay untuk menutup dropdown saat klik di luar */}
+                <div
+                  className="fixed inset-0 z-10"
+                  onClick={() => setIsLanguageDropdownOpen(false)}
+                ></div>
+
+                <div className="absolute right-0 mt-2 w-40 bg-bg-element border border-secondary rounded-lg shadow-lg z-20 overflow-hidden">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() =>
+                        handleLanguageChange(lang.code as Language)
+                      }
+                      className={`w-full flex items-center space-x-3 px-4 py-3 text-sm hover:bg-bg-alt transition-colors duration-150 ${
+                        language === lang.code
+                          ? "bg-primary bg-opacity-10 text-primary"
+                          : "text-text-primary hover:text-primary"
+                      }`}
+                    >
+                      <span className="text-lg">{lang.flag}</span>
+                      <span className="font-medium">{lang.name}</span>
+                      {language === lang.code && (
+                        <i className="fas fa-check text-primary ml-auto text-xs"></i>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
 
           <button
             onClick={toggleDarkMode}
@@ -136,18 +190,23 @@ const Header = () => {
                     )}
                   </button>
                 </div>
+
+                {/* Mobile Language Selector */}
                 <div className="flex items-center justify-between">
                   <span className="text-text-primary">Language</span>
                   <select
                     value={language}
-                    onChange={handleLanguageChange}
-                    className="px-2 py-1 text-sm border rounded bg-bg-alt text-text-primary border-secondary font-body focus:outline-none focus:ring-1 focus:ring-primary"
+                    onChange={handleLanguageSelectChange}
+                    className="px-3 py-2 text-sm border rounded-lg bg-bg-alt text-text-primary border-secondary font-body focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 min-w-[120px]"
                   >
-                    <option value="en">{t("language.en")}</option>
-                    <option value="id">{t("language.id")}</option>
-                    <option value="ja">{t("language.ja")}</option>
+                    {languages.map((lang) => (
+                      <option key={lang.code} value={lang.code}>
+                        {lang.flag} {lang.name}
+                      </option>
+                    ))}
                   </select>
                 </div>
+
                 <a
                   className="w-full mt-4 btn btn-primary"
                   href="/cv-rizqiansyah-ramadhan.pdf"
