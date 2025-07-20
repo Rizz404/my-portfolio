@@ -1,5 +1,4 @@
 import { useState, type ReactNode, useEffect, useCallback } from "react";
-import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
@@ -18,73 +17,95 @@ export const LocalizationProvider = ({
   const navigate = useNavigate();
   const location = useLocation();
 
-  // State untuk melacak apakah bahasa sedang berganti
   const [isChangingLanguage, setIsChangingLanguage] = useState(false);
 
-  // Get language from i18next or default to 'en'
+  // Inisialisasi language dari i18n yang sudah ready
   const [language, setLanguageState] = useState<Language>(() => {
-    const currentLang = i18next.language?.substring(0, 2);
-    return currentLang === "en" || currentLang === "id"
+    // Tunggu sampai i18n ready
+    if (!i18n.isInitialized) {
+      return "en"; // Default sementara
+    }
+    const currentLang = i18n.language?.substring(0, 2);
+    return currentLang === "en" || currentLang === "id" || currentLang === "ja"
       ? (currentLang as Language)
       : "en";
   });
 
-  // Function to change language and update URL
+  // Update language state ketika i18n ready
+  useEffect(() => {
+    if (i18n.isInitialized) {
+      const currentLang = i18n.language?.substring(0, 2);
+      if (
+        currentLang === "en" ||
+        currentLang === "id" ||
+        currentLang === "ja"
+      ) {
+        setLanguageState(currentLang as Language);
+      }
+    }
+  }, [i18n.isInitialized, i18n.language]);
+
   const setLanguage = useCallback(
-    (newLanguage: Language) => {
-      // Only proceed if language actually changed
-      if (language !== newLanguage) {
-        // Set loading state true
+    async (newLanguage: Language) => {
+      if (language !== newLanguage && i18n.isInitialized) {
         setIsChangingLanguage(true);
 
-        // Change i18next language
-        i18n.changeLanguage(newLanguage).then(() => {
+        try {
+          await i18n.changeLanguage(newLanguage);
           setLanguageState(newLanguage);
 
-          // Save to localStorage
-          localStorage.setItem("i18nextLng", newLanguage);
+          // Save to localStorage dengan error handling
+          try {
+            localStorage.setItem("i18nextLng", newLanguage);
+          } catch (error) {
+            console.warn("Cannot save to localStorage:", error);
+          }
 
-          // Update URL to reflect language change
+          // Update URL
           if (location.pathname) {
             const currentLangPrefix = `/${language}`;
             const newLangPrefix = `/${newLanguage}`;
 
-            // If URL starts with current language prefix, update it
             if (location.pathname.startsWith(currentLangPrefix)) {
               const newPath = location.pathname.replace(
                 currentLangPrefix,
                 newLangPrefix
               );
-              navigate(newPath);
-            }
-            // If URL doesn't have a language prefix yet, add it
-            else if (!location.pathname.startsWith(`/${newLanguage}`)) {
-              navigate(`/${newLanguage}`);
+              navigate(newPath, { replace: true });
+            } else if (!location.pathname.startsWith(`/${newLanguage}`)) {
+              navigate(`/${newLanguage}${location.pathname}`, {
+                replace: true,
+              });
             }
           }
-
-          // Gunakan timeout untuk memastikan UI sepenuhnya di-update sebelum menghilangkan loading state
+        } catch (error) {
+          console.error("Failed to change language:", error);
+        } finally {
           setTimeout(() => {
             setIsChangingLanguage(false);
-          }, 50);
-        });
+          }, 100);
+        }
       }
     },
     [i18n, language, location.pathname, navigate]
   );
 
-  // Check URL for language prefix when component mounts
+  // Sync dengan URL changes
   useEffect(() => {
     const pathParts = location.pathname.split("/");
     if (pathParts.length > 1) {
       const urlLang = pathParts[1];
-      if ((urlLang === "en" || urlLang === "id") && urlLang !== language) {
+      if (
+        (urlLang === "en" || urlLang === "id" || urlLang === "ja") &&
+        urlLang !== language &&
+        i18n.isInitialized
+      ) {
         setIsChangingLanguage(true);
         setLanguageState(urlLang as Language);
-        i18n.changeLanguage(urlLang).then(() => {
+        i18n.changeLanguage(urlLang).finally(() => {
           setTimeout(() => {
             setIsChangingLanguage(false);
-          }, 50);
+          }, 100);
         });
       }
     }
@@ -95,7 +116,7 @@ export const LocalizationProvider = ({
       value={{
         language,
         setLanguage,
-        isChangingLanguage, // Tambahkan state loading ke context
+        isChangingLanguage,
         t,
         isRTL: ["ar", "he"].includes(language),
       }}

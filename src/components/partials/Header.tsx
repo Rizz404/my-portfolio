@@ -69,6 +69,7 @@ const Header = () => {
           >
             <option value="en">En</option>
             <option value="id">Id</option>
+            <option value="ja">Ja</option>
           </select>
 
           <button
@@ -144,6 +145,7 @@ const Header = () => {
                   >
                     <option value="en">{t("language.en")}</option>
                     <option value="id">{t("language.id")}</option>
+                    <option value="ja">{t("language.ja")}</option>
                   </select>
                 </div>
                 <a

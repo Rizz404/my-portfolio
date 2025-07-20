@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import type { TFunction } from "i18next";
 
-export type Language = "en" | "id";
+export type Language = "en" | "id" | "ja";
 
 interface LocalizationContextType {
   language: Language;

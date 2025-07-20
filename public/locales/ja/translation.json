@@ -1,0 +1,193 @@
+{
+  "navigation": {
+    "home": "ホーム",
+    "skills": "スキル",
+    "aboutMe": "自己紹介",
+    "experience": "経験",
+    "projects": "プロジェクト",
+    "contact": "連絡先"
+  },
+  "language": {
+    "en": "英語",
+    "id": "インドネシア語",
+    "ja": "日本語"
+  },
+  "theme": {
+    "darkMode": "ダークモード",
+    "lightMode": "ライトモード"
+  },
+  "actions": {
+    "downloadCV": "CVをダウンロード"
+  },
+  "hero": {
+    "greeting": "こんにちは、私は",
+    "name": "リズキアンシャー・ラマダンです。",
+    "role": "ソフトウェア",
+    "developer": "開発者",
+    "location": "拠点としています",
+    "city": "バンテン州、タンゲラン。",
+    "bio": "バックエンド開発を専門とするソフトウェア工学の学士課程の学生で、APIの構築と管理に経験があります。Go（Golang）、Express、NestJS、Flask、Laravelなど、多様な技術スタックに精通しています。MongoDB、MySQL、PostgreSQL、SQLite、Firebaseなどのさまざまなデータベースに習熟しており、フロントエンド統合に関する深い理解も持っています。",
+    "imageAlt": "コードやサーバーを扱うバックエンド開発者のイラスト"
+  },
+  "skills": {
+    "heading": "スキル",
+    "heading2": "私の",
+    "categories": {
+      "all": "全て",
+      "language": "プログラミング言語",
+      "framework": "フレームワーク",
+      "database": "データベース",
+      "tools": "ツール",
+      "addition": "その他"
+    },
+    "showMore": "もっと見る",
+    "showLess": "少なく表示"
+  },
+  "experience": {
+    "heading1": "経験",
+    "currentFocus": "現在は、以下の大学での経験を積み、学業を修了することに集中しています：",
+    "universityName": "グローバル・インスティテュート・テクノロジー・アンド・ビジネス",
+    "universityPeriod": "(2022-2025年)。",
+    "sanken": {
+      "position": "インターンシップ - 品質管理",
+      "period": "2023年 - 2024年",
+      "description1": "冷蔵庫ユニットの品質チェックを行い、会社の基準に適合していることを確認しました。",
+      "description2": "製造プロセス中の欠陥を特定し解決するために、生産チームと協力しました。"
+    },
+    "visionet": {
+      "position": "ITチームとしての一日体験",
+      "period": "2023年10月",
+      "description1": "実践的な経験を積むため、ITチームの一員として短期研修に参加しました。"
+    }
+  },
+  "aboutMe": {
+    "heading1": "私について",
+    "heading2": "自己紹介",
+    "imageAlt": "リズキアンシャー・ラマダンのプロフィール写真",
+    "paragraph1": "グローバル・インスティテュート・テクノロジー・アンド・ビジネスでソフトウェア工学を学ぶ学士課程の学生で、バックエンド開発を専門としています。Go（Golang）、Express、NestJS、Flask、Laravelなど、様々なバックエンドフレームワークを使用したAPIの構築・管理経験があります。",
+    "paragraph2": "MongoDB、MySQL、PostgreSQL、SQLite、Firebaseなどの多様なデータベースに習熟しており、フロントエンド統合に関する深い理解も持っています。また、Flutterを使用したモバイル開発にも精通しています。",
+    "additionalSkillsHeading": "その他のスキル",
+    "additionalSkills": [
+      "コラボレーション",
+      "コミュニケーション",
+      "問題解決",
+      "時間管理"
+    ],
+    "languagesHeading": "言語",
+    "languages": ["インドネシア語（ネイティブ）", "英語（中級）"],
+    "quote": "テクノロジーがどのようにつながり、素晴らしい製品を生み出すのかという好奇心に駆られています。協力的なチームで成長し、自分の専門知識を貢献することに情熱を注いでいます。"
+  },
+  "projects": {
+    "heading1": "プロジェクト",
+    "heading2": "私の",
+    "categories": {
+      "all": "すべてのプロジェクト",
+      "frontend": "フロントエンド",
+      "backend": "バックエンド",
+      "fullstack": "フルスタック",
+      "mobile": "モバイル"
+    },
+    "showMore": "もっと見る",
+    "showLess": "少なく表示",
+    "status": {
+      "deployed": "デプロイ済み",
+      "development": "開発中",
+      "label": "ステータス",
+      "maintained": "メンテナンス中",
+      "archived": "アーカイブ済み"
+    },
+    "deployment": {
+      "label": "デプロイメント",
+      "deployed": "デプロイ済み",
+      "notDeployed": "未デプロイ"
+    },
+    "techStackHeading": "使用技術",
+    "noProjectsFound": "このカテゴリにはプロジェクトがありません。",
+    "closeButton": "閉じる",
+    "closeModalAriaLabel": "プロジェクト詳細を閉じる",
+    "portfolio": {
+      "name": "私のポートフォリオ",
+      "description": "React.jsを使用して構築された、ダイナミックでレスポンシブな個人ポートフォリオウェブサイト。インタラクティブなユーザーインターフェースが特徴です。i18nextを使用した多言語機能が搭載されており、より幅広いオーディエンスにアプローチできます。また、モダンなデザインでプロジェクトやスキルを効果的に紹介します。"
+    },
+    "catMarketplace": {
+      "name": "ネイティブPHPによる猫のマーケットプレイス",
+      "description": "ネイティブPHPを使用して開発された、猫愛好家コミュニティ専用のEコマースプラットフォーム。このアプリケーションにより、ユーザーは安全に血統書付きの猫を売買でき、高度な検索、品種や場所によるフィルター、直感的なショッピングカートシステムなどの基本機能が備わっています。"
+    },
+    "socialMediaApi": {
+      "name": "ソーシャルメディアAPI",
+      "description": "ソーシャルメディアアプリケーションのバックボーンとなるRESTful API。ユーザデータ管理、トークンを使用した安全な認証、投稿の作成と管理、および「いいね」やコメントなどのソーシャルインタラクション機能を処理するために構築されました。"
+    },
+    "magicScrollApi": {
+      "name": "マジックスクロールAPI",
+      "description": "デジタルノート作成アプリケーション専用に設計されたバックエンドAPI。このAPIは、ノートの作成、読み取り、更新、削除のためのエンドポイントを提供し、ブックマークやテキストのハイライトなどの高度な機能を備えています。"
+    },
+    "sistemInformasiKKN": {
+      "name": "KKN/KKP登録情報システム",
+      "description": "地域社会奉仕活動（KKN/KKP）プログラムの登録および管理プロセスをデジタル化し、簡素化することを目的としたウェブベースの情報システム。このアプリケーションは、登録から活動報告までのワークフローを容易にします。"
+    },
+    "happinessOverloadApiV1": {
+      "name": "ハピネスオーバーロードAPI v1",
+      "description": "ユーザー登録、ログイン、投稿の作成と対話機能などのコア操作を処理するために設計されたソーシャルメディアAPIの初期バージョン。このプロジェクトは、将来のより複雑な機能開発の基盤となります。"
+    },
+    "happinessOverloadApiV2": {
+      "name": "ハピネスオーバーロードAPI v2",
+      "description": "ハピネスオーバーロードAPIの第2版で、パフォーマンスとスケーラビリティが大幅に向上しています。このバージョンでは、より成熟したアーキテクチャ、データベースクエリの最適化、通知システムやパーソナライズされたフィードなどの新機能が導入されています。"
+    },
+    "magicScrollApiV2": {
+      "name": "マジックスクロールAPI v2",
+      "description": "アーキテクチャを再構築してモジュール性と保守性を向上させたマジックスクロールAPIの改良版。このバージョンでは、ノートのリアルタイム共同編集機能とデバイス間の同期機能が追加されています。"
+    },
+    "catShopApiWithExpress": {
+      "name": "Expressによる猫ショップAPI",
+      "description": "猫専門のEコマースアプリケーションをサポートするためにExpress.jsを使用して構築されたバックエンドAPI。このAPIは、在庫管理、製品レビューと評価システム、ユーザーの取引履歴など、より豊富な機能を提供します。"
+    },
+    "simpleFlutterTodo": {
+      "name": "シンプルなFlutter Todo",
+      "description": "日常のタスクリストを管理するための機能的なクロスプラットフォームモバイルアプリケーション。Flutterで構築され、AndroidとiOSの両方でタスクの追加、完了マーク、削除を行うためのクリーンで直感的なインターフェースを提供します。"
+    },
+    "gunApiWithFlask": {
+      "name": "Flaskによる銃API",
+      "description": "PythonのFlaskフレームワークで開発されたRESTful APIで、さまざまな種類の銃器に関する詳細な情報のデータベースおよびプロバイダーとして機能します。このAPIは、仕様、歴史、画像のデータにアクセスするためのエンドポイントを提供します。"
+    },
+    "uasMobile": {
+      "name": "UASモバイル (GO Book)",
+      "description": "GoBookは、ユーザーがお気に入りの本を簡単に見つけ、保存し、管理するのを助けるために設計された書籍管理および探索アプリケーションです。"
+    },
+    "eBookApi": {
+      "name": "標準化APIによるEブックAPI",
+      "description": "Eブックリーダーアプリケーション向けに、RESTfulのベストプラクティスと標準化に従って設計されたバックエンドAPI。このAPIは、デジタル書籍コレクション、ユーザーデータ、読書進捗、メモを一貫したエンドポイント設計で管理します。"
+    },
+    "rekomendasiJurusanLaravel": {
+      "name": "Laravelによる専攻推薦システム",
+      "description": "大学生の専攻を推薦するための意思決定支援システム（SPK）として機能する、Laravelを使用して構築されたWebアプリケーション。このシステムは、単純加重法（SAW）を実装して学生の学業成績を処理・分析し、定義された基準に基づいて最も適した専攻のランキングを生成します。"
+    },
+    "carPaintServer": {
+      "name": "自動車塗装サーバー",
+      "description": "自動車塗装カタログアプリケーション専用のバックエンドサーバー。このサーバーは、さまざまなブランド、種類、カラーコードに関する構造化されたデータを提供し、クライアントアプリケーションが製品情報を正確に表示できるようにします。"
+    },
+    "project3": {
+      "name": "プロジェクト3",
+      "description": "「バクソ・ペントル」屋台での注文と管理プロセスを容易にするために作成されたモバイルベースのPOS（販売時点情報管理）アプリケーション。このアプリケーションは、管理者/レジ係向けのデジタルソリューションとして開発され、製品、注文、取引を効率的に管理することに重点を置いています。"
+    }
+  },
+  "contact": {
+    "heading1": "連絡先",
+    "heading2": "私に",
+    "name": "リズキアンシャー・ラマダン",
+    "emailLabel": "メール",
+    "email": "thenoblerizz@gmail.com",
+    "phoneLabel": "電話番号",
+    "phone": "+62 7778206856",
+    "locationLabel": "所在地",
+    "location": "バンテン州、タンゲラン",
+    "connectHeading": "私とつながる",
+    "connectDescription": "バックエンド開発者をお探しの場合や、プロジェクトについて話し合いたい場合は、お気軽にご連絡ください。",
+    "githubAriaLabel": "GitHubプロフィール",
+    "linkedinAriaLabel": "LinkedInプロフィール",
+    "facebookAriaLabel": "Facebookプロフィール",
+    "instagramAriaLabel": "Instagramプロフィール"
+  },
+  "footer": {
+    "signature": "Rizqiansyahによって設計・維持されています"
+  }
+}
